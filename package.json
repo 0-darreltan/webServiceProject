@@ -1,0 +1,37 @@
+{
+    "name": "my-web-service",
+    "version": "1.0.0",
+    "description": "A web service using Express, Mongoose, and JWT.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "dev": "nodemon index.js",
+        "seed": "node seed.js",
+        "migrate": "node migrations/add-isActive-field.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "express",
+        "mongoose",
+        "jsonwebtoken",
+        "api"
+    ],
+    "author": "Your Name",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.21.2",
+        "jsonwebtoken": "^9.0.2",
+        "mongoose": "^8.15.1"
+    },
+    "devDependencies": {
+        "nodemon": "^3.1.10"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/0-darreltan/webServiceProject.git"
+    },
+    "bugs": {
+        "url": "https://github.com/0-darreltan/webServiceProject/issues"
+    },
+    "homepage": "https://github.com/0-darreltan/webServiceProject#readme"
+}
