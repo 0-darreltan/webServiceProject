@@ -1,57 +1,41 @@
-// index.js
-// This is the main entry point for the application.
+require("dotenv").config();
 
-// 1. Import Dependencies
 const express = require("express");
-const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
+const { connectDB, mongoose } = require("./config/mongodb"); // Impor dari file mongodb.js
 
-// 2. Initialize Express App
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Middleware to parse JSON bodies
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-// --- Database Connection (MongoDB with Mongoose) ---
-// Replace '<your_mongodb_uri>' with your actual MongoDB connection string.
-// For local development, this might be 'mongodb://localhost:27017/yourdbname'
-const MONGO_URI = process.env.MONGO_URI || "<your_mongodb_uri>";
+const sistemRouter = require("./routes");
 
-mongoose
-  .connect(MONGO_URI)
-  .then(() => console.log("Successfully connected to MongoDB."))
-  .catch((err) => console.error("Connection error", err));
+app.use("/api", sistemRouter);
 
-// --- Basic Routes ---
-
-// Welcome route
 app.get("/", (req, res) => {
   res.status(200).json({ message: "Welcome to the Web Service API!" });
 });
 
-// Example of a protected route placeholder
-// A real implementation would have middleware to verify the token.
-app.get("/api/protected", (req, res) => {
-  // Example: Check for Authorization header
-  const token = req.headers["authorization"]?.split(" ")[1]; // Bearer <token>
-
-  if (!token) {
-    return res
-      .status(401)
-      .json({ message: "Access denied. No token provided." });
-  }
-
+async function startServer() {
   try {
-    // In a real app, use your actual JWT_SECRET
-    const decoded = jwt.verify(token, "your_jwt_secret_key");
-    res.json({ message: "This is a protected route.", user: decoded });
-  } catch (error) {
-    res.status(400).json({ message: "Invalid token." });
-  }
-});
+    await connectDB();
 
-// --- Server Startup ---
-app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
-});
+    app.listen(PORT, () => {
+      console.log(`Server is running on http://localhost:${PORT}`);
+      if (mongoose.connection.readyState === 1) {
+        console.log("Mongoose connection state: connected");
+      } else {
+        console.log(
+          "Mongoose connection state:",
+          mongoose.connection.readyState
+        );
+      }
+    });
+  } catch (error) {
+    console.error("Failed to start the server:", error);
+    process.exit(1);
+  }
+}
+
+startServer();
