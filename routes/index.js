@@ -5,6 +5,8 @@ const {
   register,
   login,
   tambahCard,
+  updateCard,
+  hapusCard,
   getCardApi,
   tambahFaction,
   tambahAbility,
@@ -20,6 +22,8 @@ router.post("/login", login);
 router.get("/card", getCardApi);
 router.get("/card/api", getCardApi);
 router.post("/card/add", [verifyApiKey, cekAdmin], tambahCard);
+router.put("/card/update/:id", [verifyApiKey, cekAdmin], updateCard);
+router.delete("/card/delete/:id", [verifyApiKey, cekAdmin], hapusCard);
 router.post("/card/ability", [verifyApiKey, cekAdmin], tambahAbility);
 router.post("/card/faction", [verifyApiKey, cekAdmin], tambahFaction);
 router.post("/card/leader", [verifyApiKey, cekAdmin], tambahLeader);

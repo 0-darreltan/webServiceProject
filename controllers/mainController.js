@@ -87,7 +87,7 @@ const login = async (req, res) => {
         role: cekUser.role,
         saldo: cekUser.saldo,
       },
-      process.env.JWT_KEY,
+      "kuncijwt",
       { expiresIn: "30m" }
     );
 
@@ -127,9 +127,97 @@ const getCardApi = async (req, res) => {
 };
 
 const tambahCard = async (req, res) => {
-  // const user = await User.findById(req.user._id);
+  const { name, faction, type, ability, power } = req.body;
+
+  const cekkartu = await Card.findOne({ name: name });
+
+  if (cekkartu) {
+    return res.status(400).json({ message: "Kartu sudah ada!" });
+  }
+
+  cekfraksi = await Faction.findOne({ name: faction });
+
+  if (!cekfraksi) {
+    return res.status(404).json({ message: "Faction tidak ditemukan!" });
+  }
+
+  const tipekartu = await TypeCard.findOne({ name: type });
+
+  if (!tipekartu) {
+    return res.status(404).json({ message: "Tipe kartu tidak ditemukan!" });
+  }
+
+  const cekability = await Ability.findOne({ name: ability });
+
+  if (!cekability) {
+    return res.status(404).json({ message: "Ability tidak ditemukan!" });
+  }
+
+  await Card.create({
+    name: name,
+    faction: faction,
+    typeCard: type,
+    ability: ability,
+    power: power || 0, 
+  })
+
   return res.status(200).json({ message: "Card berhasil ditambahkan!" });
 };
+
+const updateCard = async (req, res) => {
+  const { id } = req.params;
+  const { name, faction, type, ability, power } = req.body;
+
+  if (!name || !faction || !type || !ability) {
+    return res.status(400).json({ message: "Semua field perlu diisi!" });
+  }
+
+  const kartu = await Card.findById(id);
+
+  if (!kartu) {
+    return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+  }
+
+  const cekfaksi = await Faction.findOne({ name: faction });
+  if (!cekfaksi) {
+    return res.status(404).json({ message: "Faction tidak ditemukan!" });
+  }
+
+  const cekType = await TypeCard.findOne({ name: type });
+  if (!cekType) {
+    return res.status(404).json({ message: "Tipe kartu tidak ditemukan!" });
+  }
+
+  const cekAbility = await Ability.findOne({ name: ability });
+  if (!cekAbility) {
+    return res.status(404).json({ message: "Ability tidak ditemukan!" });
+  }
+
+  kartu.name = name;
+  kartu.faction = faction;
+  kartu.typeCard = type;
+  kartu.ability = ability;
+  kartu.power = power || 0; 
+
+  await kartu.save();
+
+  return res.status(200).json({ message: `Kartu ${name} berhasil diperbarui!` });
+
+}
+
+const hapusCard = async (req, res) => {
+  const { id } = req.params;
+
+  const kartu = await Card.findById(id);
+
+  if (!kartu) {
+    return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+  }
+
+  await Card.deleteOne({ _id: id });
+
+  return res.status(200).json({ message: `Kartu ${kartu.name} berhasil dihapus!` });
+}
 
 const tambahFaction = async (req, res) => {
   const { name, description } = req.body;
@@ -187,14 +275,41 @@ const tambahLeader = async (req, res) => {
 };
 
 const tambahTypeCard = async (req, res) => {
-  return res.status(200).json({ message: "TypeCard berhasil ditambahkan!" });
+
+  const { name, description } = req.body;
+  if (!name || !description) {
+    return res.status(400).json({ message: "Semua field perlu diisi!" });
+  }
+
+  const cekTypeCard = await TypeCard.findOne({ name: name });
+  if (cekTypeCard) {
+    return res.status(400).json({ message: "TypeCard sudah ada!" });
+  }
+
+  const newTypeCard = await TypeCard.create({
+    name: name,
+    description: description,
+  });
+
+  return res.status(200).json({ 
+    message: "TypeCard berhasil ditambahkan!",
+    typeCard: {
+      id: newTypeCard._id,
+      name: newTypeCard.name,
+      description: newTypeCard.description,
+    },
+  });
 };
+
+
 
 module.exports = {
   register,
   login,
   getCardApi,
   tambahCard,
+  updateCard,
+  hapusCard,
   tambahFaction,
   tambahAbility,
   tambahLeader,

@@ -10,18 +10,18 @@ const cardSchema = new mongoose.Schema(
       trim: true,
     },
     faction: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: String,
       ref: "Faction",
       required: [true, "Faksi tidak boleh kosong"],
     },
     typeCard: {
-      type: mongoose.Schema.Types.ObjectId,
+      type: String,
       ref: "TypeCard",
       required: [true, "Tipe kartu tidak boleh kosong"],
     },
     ability: [
       {
-        type: mongoose.Schema.Types.ObjectId,
+        type: String,
         ref: "Ability",
       },
     ],
