@@ -245,6 +245,28 @@ const tambahFaction = async (req, res) => {
   });
 };
 
+const updateFaction = async (req, res) => {
+  const { id } = req.params;
+  const { name, description } = req.body;
+
+  if (!name || !description) {
+    return res.status(400).json({ message: "Semua field perlu diisi!" });
+  }
+
+  const faction = await Faction.findById(id);
+
+  if (!faction) {
+    return res.status(404).json({ message: "Faction tidak ditemukan!" });
+  }
+
+  faction.name = name;
+  faction.description = description;
+
+  await faction.save();
+
+  return res.status(200).json({ message: `Faction ${name} berhasil diperbarui!` });
+}
+
 const tambahAbility = async (req, res) => {
   const { name, description } = req.body;
   if (!name || !description) {
@@ -270,6 +292,29 @@ const tambahAbility = async (req, res) => {
     },
   });
 };
+
+const updateAbility = async (req, res) => {
+  const { id } = req.params;
+  const { name, description } = req.body;
+
+  if (!name || !description) {
+    return res.status(400).json({ message: "Semua field perlu diisi!" });
+  }
+
+  const ability = await Ability.findById(id);
+
+  if (!ability) {
+    return res.status(404).json({ message: "Ability tidak ditemukan!" });
+  }
+
+  ability.name = name;
+  ability.description = description;
+
+  await ability.save();
+
+  return res.status(200).json({ message: `Ability ${name} berhasil diperbarui!` });
+};
+
 const tambahLeader = async (req, res) => {
   return res.status(200).json({ message: "Leader berhasil ditambahkan!" });
 };
@@ -311,7 +356,9 @@ module.exports = {
   updateCard,
   hapusCard,
   tambahFaction,
+  updateFaction,
   tambahAbility,
+  updateAbility,
   tambahLeader,
   tambahTypeCard,
 };
