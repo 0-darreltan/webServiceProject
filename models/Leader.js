@@ -11,9 +11,9 @@ const leaderSchema = new mongoose.Schema(
       required: [true, "Effect tidak boleh kosong"],
     },
     faction: {
-      type: String,
-      required: [true, "Faksi tidak boleh kosong"],
-      trim: true,
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Faction",
+      required: [true, "Faction tidak boleh kosong"],
     },
   },
   {

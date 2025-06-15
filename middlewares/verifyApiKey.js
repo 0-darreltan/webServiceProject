@@ -11,7 +11,7 @@ const verifyApiKey = async (req, res, next) => {
   }
 
   try {
-    const decoded = jwt.verify(token, "kuncijwt");
+    const decoded = jwt.verify(token, process.env.JWT_KEY);
 
     const user = await User.findById(decoded._id);
 
