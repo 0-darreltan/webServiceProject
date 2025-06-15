@@ -1,0 +1,32 @@
+[{
+  "_id": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "name": "Close Combat",
+  "description": "This unit fights on the Close Combat row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "name": "Ranged",
+  "description": "This unit fights on the Ranged row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "name": "Siege",
+  "description": "This unit fights on the Siege row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "name": "Agile",
+  "description": "This unit has the flexibility to be placed on either the Close Combat or Ranged rows.",
+  "__v": 0
+}]

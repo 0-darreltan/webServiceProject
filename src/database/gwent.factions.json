@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "name": "Neutral",
+  "description": "Neutral is one of the factions in Gwent. The neutral faction has no leaders.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "name": "Monsters",
+  "description": "The world of The Witcher is infested with unspeakable horrors, most of which are gathered in the fearsome Monsters faction. They attack in vast numbers that grow into hordes and when brute strength is needed instead, they consume their kin and absorb their strength.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "name": "Northern Realms",
+  "description": "The Northern Realms seek to gain control of the battlefield by reinforcing their numbers. Their valiant commanders march in the front lines to inspire their units and boost their strength. Their troops can be protected against attacks and weather spells thanks to Armor and Shields.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "name": "Scoia'tael",
+  "description": "As befits guerilla fighters, they often set ambushes: cards played face down which reveal themselves only when the trap has already sprung. To bolster their numbers, the Scoia'tael quickly raise new Commandos, zealous neophytes that take the opponent by surprise.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "name": "Skellige",
+  "description": "Skelligers embrace death’s glory, knowing their priestesses and medics can summon departed heroes from the Graveyard to fight another day. A Skellige player sends units to the Graveyard on purpose… only to bring them back later, stronger than ever. Skelligers also turn wounds to their favor by inciting their bloodied warriors to attack with redoubled strength.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "name": "Nilfgaardian Empire",
+  "description": "More than any other faction, Nilfgaard relies on diplomacy and subterfuge to disrupt enemy strategies and enact its own. The empire plants Spies behind enemy lines to perform sabotage and reveal cards in the opponent’s hand.",
+  "__v": 0
+}]

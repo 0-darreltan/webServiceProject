@@ -1,0 +1,80 @@
+[{
+  "_id": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "username": "AaronGanteng",
+  "email": "aaronganteng@gmail.com",
+  "password": "$2b$10$4fJ6MGuO5ZOT3XpAOOr.7.qGTztUGPj5JJyH5Sx549aLsRTtmcQwy",
+  "role": "admin",
+  "saldo": 0,
+  "totalWins": 0,
+  "deck": [],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-11T13:53:12.657Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T13:53:12.657Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "username": "WinstonSemok",
+  "email": "winstonsemok@gmail.com",
+  "password": "$2b$10$kS05yE.CmIzBXYBcsuNTHeiSmZz1DMo90YBVFAZtkNrzi3TSaTZMi",
+  "role": "admin",
+  "saldo": 0,
+  "totalWins": 0,
+  "deck": [],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-11T14:00:16.101Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:00:16.101Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68498c1d84162c28eda52f75"
+  },
+  "username": "DarrelBigBoss",
+  "email": "darrelbigboss@gmail.com",
+  "password": "$2b$10$hCQDlwN2EMUPKnUiFHfS5eYiS6A7tf.Yipph4q6pIuHFzMkBtW/Ay",
+  "role": "admin",
+  "saldo": 0,
+  "totalWins": 0,
+  "deck": [],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-11T14:01:01.659Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:01:01.659Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "username": "Mulyono",
+  "email": "mulyono@gmail.com",
+  "password": "$2b$10$.l5oMw179RgKMP6mGIgPveGnT5jLQ7UEbVz4EaCKIyQiiHmArMzaG",
+  "role": "player",
+  "saldo": 0,
+  "totalWins": 0,
+  "deck": [],
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-11T14:01:42.939Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-11T14:01:42.939Z"
+  },
+  "__v": 0
+}]

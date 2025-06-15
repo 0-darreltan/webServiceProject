@@ -1,0 +1,72 @@
+[{
+  "_id": {
+    "$oid": "68499bca8ceafc3c4ea107d9"
+  },
+  "name": "Commander's Horn",
+  "description": "This appears as a non-unit Neutral card (place on any row), or as a character’s ability (affects only the row the character is played on). It doubles the strength of all unit cards in that row. Limit to 1 per row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499bf08ceafc3c4ea107dd"
+  },
+  "name": "Decoy",
+  "description": "This non-unit Neutral card allows you to swap it with a card on the battlefield to return it to your hand.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499bfe8ceafc3c4ea107e1"
+  },
+  "name": "Hero",
+  "description": "This unit is immune to any special effects or abilities.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499c4a8ceafc3c4ea107f1"
+  },
+  "name": "Scorch",
+  "description": "Destroy enemy’s strongest unit in a specific row, if the combined strength of all his or her units is 10 or more. “Scorch” and “Clan Dimom Pirate” cards affect the whole battlefield. “Scorch (Specific Row)” cards (which are all “character” cards, beside the Clan Dimom Pirate) affect only one row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499c558ceafc3c4ea107f5"
+  },
+  "name": "Spy",
+  "description": "Place on your opponent’s battlefield and draw 2 cards from your deck.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499c628ceafc3c4ea107f9"
+  },
+  "name": "Tight Bond",
+  "description": "Placing this unit next to a card with the same name will double the strength of both cards.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499c8f8ceafc3c4ea107fd"
+  },
+  "name": "Medic",
+  "description": "After playing this card, choose one card from the discard pile and play it instantly (no Heroes or Special cards).",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68499caf8ceafc3c4ea10801"
+  },
+  "name": "Morale Boost",
+  "description": "Adds +1 to all units in the row (excluding itself).",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "684ea1e93b046a594446a16e"
+  },
+  "name": "Muster",
+  "description": "Find any cards with the same name in your deck and play them instantly.",
+  "__v": 0
+}]

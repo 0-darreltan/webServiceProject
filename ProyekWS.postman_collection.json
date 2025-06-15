@@ -1,0 +1,795 @@
+{
+	"info": {
+		"_postman_id": "f8f15ba7-50f3-4b9e-8206-6d87955efbeb",
+		"name": "ProyekWS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42945845"
+	},
+	"item": [
+		{
+			"name": "Cards",
+			"item": [
+				{
+					"name": "getCardApi",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/api",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"api"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "tambahCard",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "faction",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ability",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "faction",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ability",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "power",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCard",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCard",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Faction",
+			"item": [
+				{
+					"name": "tambahFaction",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Skellige",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Skelligers embrace death’s glory, knowing their priestesses and medics can summon departed heroes from the Graveyard to fight another day. A Skellige player sends units to the Graveyard on purpose… only to bring them back later, stronger than ever. Skelligers also turn wounds to their favor by inciting their bloodied warriors to attack with redoubled strength.",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/faction",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"faction"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateFaction",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/faction/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"faction",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteFaction",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/faction/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"faction",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Type Card",
+			"item": [
+				{
+					"name": "tambahTypeCard",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/type",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateTypeCard",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/type/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"type",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTypeCard",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/type/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"type",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Ability",
+			"item": [
+				{
+					"name": "tambahAbiliity",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/ability",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"ability"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateAbility",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/ability/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"ability",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAbility",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/ability/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"ability",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Leader",
+			"item": [
+				{
+					"name": "tambahLeader",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "faction",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "effect",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/leader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"leader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateLeader",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "faction",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "effect",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/leader/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"leader",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteLeader",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NDk5ODMwODgsImV4cCI6MTc0OTk4NDg4OH0.fqEqDI4xUoK7VPUZNoJ-U1kBBzJ-rRWNXwdH0YNA03U",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "faction",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "effect",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/card/leader/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"leader",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "AaronGanteng",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "aaronganteng@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaron123",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "AaronGanteng",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "aaron123",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

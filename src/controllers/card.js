@@ -1,146 +1,53 @@
 const axios = require("axios");
-const bcrypt = require("bcrypt");
-const multer = require("multer");
-const jwt = require("jsonwebtoken");
-const path = require("path");
-const fs = require("fs");
-
+const { Card, Faction, TypeCard, Ability, Leader } = require("../models");
 const {
-  Ability,
-  Card,
-  Deck,
-  Faction,
-  HistoryPlay,
-  HistoryTopup,
-  Leader,
-  TypeCard,
-  User,
-} = require("../models");
-
-const {
-  registerValidation,
-  loginValidation,
   cardValidation,
-  factionValidation,
-  typeValidation,
   abilityValidation,
+  factionValidation,
   leaderValidation,
+  typeValidation,
 } = require("../validations");
-
-const register = async (req, res) => {
-  const { username, email, password, role } = req.body;
-
-  try {
-    await registerValidation.validateAsync(req.body, {
-      abortEarly: false,
-    });
-  } catch (validationError) {
-    const errorMessages = validationError.details
-      .map((detail) => detail.message)
-      .join(", ");
-    return res.status(400).json({ message: errorMessages });
-  }
-
-  try {
-    const cekUser = await User.findOne({ username: username });
-
-    if (cekUser) {
-      return res.status(400).json({ message: "Username sudah terdaftar!" });
-    }
-
-    const hashedPassword = await bcrypt.hash(password, 10);
-
-    const newUser = await User.create({
-      username: username,
-      email: email,
-      password: hashedPassword,
-      role: role,
-    });
-
-    return res.status(201).json({
-      message: "User berhasil terdaftar!",
-      user: {
-        id: newUser._id,
-        username: newUser.username,
-        email: newUser.email,
-        role: newUser.role,
-      },
-    });
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-};
-
-const login = async (req, res) => {
-  const { username, password } = req.body;
-
-  try {
-    await loginValidation.validateAsync(req.body, { abortEarly: false });
-  } catch (validationError) {
-    const errorMessages = validationError.details
-      .map((detail) => detail.message)
-      .join(", ");
-    return res.status(400).json({ message: errorMessages });
-  }
-
-  try {
-    const cekUser = await User.findOne({ username: username });
-
-    if (!cekUser) {
-      return res.status(404).json({ message: "Username tidak ditemukan!" });
-    }
-
-    const cekPass = await bcrypt.compare(password, cekUser.password);
-
-    if (!cekPass) {
-      return res.status(400).json({ message: "Password salah!" });
-    }
-
-    // console.log("JWT KEY nya : " + process.env.JWT_KEY);
-
-    let token = jwt.sign(
-      {
-        _id: cekUser._id,
-        username: cekUser.username,
-        role: cekUser.role,
-        saldo: cekUser.saldo,
-      },
-      process.env.JWT_KEY,
-      { expiresIn: "30m" }
-    );
-
-    return res.status(200).json({
-      message: `Selamat ${cekUser.username} berhasil melakukan login!`,
-      token: token,
-    });
-  } catch (error) {
-    return res.status(400).json({ message: error.message });
-  }
-};
 
 const getCardApi = async (req, res) => {
   try {
-    // URL dari API eksternal
     const gwentApiUrl = "https://api.gwent.one/?key=data&version=3.0.0";
 
     console.log("Fetching data from Gwent API...");
 
-    // 1. Tembak API eksternal menggunakan Axios
     const response = await axios.get(gwentApiUrl);
-
-    // Data dari API biasanya ada di dalam properti `data` dari response axios
     const cardsData = response.data;
 
     console.log("Successfully fetched data.");
 
-    // 2. Kirim data yang didapat langsung sebagai response
     return res.status(200).json(cardsData);
   } catch (error) {
-    // Tangani jika API eksternal error atau tidak bisa dijangkau
     console.error("Error fetching data from Gwent API:", error.message);
     return res
       .status(500)
       .json({ message: "Gagal mengambil data dari sumber eksternal." });
+  }
+};
+
+const getAllCard = async (req, res) => {
+  try {
+    const cards = await Card.find();
+    return res.status(200).json(cards);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getCardByQuery = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const card = await Card.findById(id);
+    if (!card) {
+      return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+    }
+    return res.status(200).json(card);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
   }
 };
 
@@ -292,89 +199,24 @@ const deleteCard = async (req, res) => {
   }
 };
 
-const tambahFaction = async (req, res) => {
-  const { name, description } = req.body;
-
+const getAllAbilities = async (req, res) => {
   try {
-    await factionValidation.validateAsync(req.body, { abortEarly: false });
-  } catch (validationError) {
-    const errorMessages = validationError.details
-      .map((detail) => detail.message)
-      .join(", ");
-    return res.status(400).json({ message: errorMessages });
-  }
-
-  try {
-    const cekFaction = await Faction.findOne({ name: name });
-
-    if (cekFaction) {
-      return res.status(400).json({ message: "Faction sudah ada!" });
-    }
-
-    const result = await Faction.create({
-      name: name,
-      description: description,
-    });
-
-    return res.status(201).json({
-      message: "Faction berhasil ditambahkan!",
-      faction: {
-        id: result._id,
-        name: result.name,
-        description: result.description,
-      },
-    });
+    const abilities = await Ability.find();
+    return res.status(200).json(abilities);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const updateFaction = async (req, res) => {
-  const { _id } = req.params;
-  const { name, description } = req.body;
+const getAbilitiesByQuery = async (req, res) => {
+  const { id } = req.params;
 
   try {
-    await factionValidation.validateAsync(req.body, { abortEarly: false });
-  } catch (validationError) {
-    const errorMessages = validationError.details
-      .map((detail) => detail.message)
-      .join(", ");
-    return res.status(400).json({ message: errorMessages });
-  }
-
-  try {
-    const cekFaction = await Faction.findById(_id);
-
-    if (!cekFaction) {
-      return res.status(404).json({ message: "Faction tidak ditemukan!" });
+    const ability = await Ability.findById(id);
+    if (!ability) {
+      return res.status(404).json({ message: "Ability tidak ditemukan!" });
     }
-
-    cekFaction.name = name;
-    cekFaction.description = description;
-
-    await cekFaction.save();
-
-    return res
-      .status(200)
-      .json({ message: `Faction ${cekFaction.name} berhasil diperbarui!` });
-  } catch (error) {
-    return res.status(500).json({ message: error.message });
-  }
-};
-
-const deleteFaction = async (req, res) => {
-  const { _id } = req.params;
-
-  try {
-    const cekFaction = await Faction.findById(_id);
-    if (!cekFaction) {
-      return res.status(404).json({ message: "Faction tidak ditemukan!" });
-    }
-
-    await Faction.deleteOne({ _id });
-    return res
-      .status(200)
-      .json({ message: `Faction ${cekFaction.name} berhasil dihapus!` });
+    return res.status(200).json(ability);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -463,6 +305,140 @@ const deleteAbility = async (req, res) => {
     return res
       .status(200)
       .json({ message: `Ability ${cekAbility.name} berhasil dihapus!` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getAllFaction = async (req, res) => {
+  try {
+    const factions = await Faction.find();
+    return res.status(200).json(factions);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getFactionByQuery = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const faction = await Faction.findById(id);
+    if (!faction) {
+      return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+    }
+    return res.status(200).json(faction);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const tambahFaction = async (req, res) => {
+  const { name, description } = req.body;
+
+  try {
+    await factionValidation.validateAsync(req.body, { abortEarly: false });
+  } catch (validationError) {
+    const errorMessages = validationError.details
+      .map((detail) => detail.message)
+      .join(", ");
+    return res.status(400).json({ message: errorMessages });
+  }
+
+  try {
+    const cekFaction = await Faction.findOne({ name: name });
+
+    if (cekFaction) {
+      return res.status(400).json({ message: "Faction sudah ada!" });
+    }
+
+    const result = await Faction.create({
+      name: name,
+      description: description,
+    });
+
+    return res.status(201).json({
+      message: "Faction berhasil ditambahkan!",
+      faction: {
+        id: result._id,
+        name: result.name,
+        description: result.description,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const updateFaction = async (req, res) => {
+  const { _id } = req.params;
+  const { name, description } = req.body;
+
+  try {
+    await factionValidation.validateAsync(req.body, { abortEarly: false });
+  } catch (validationError) {
+    const errorMessages = validationError.details
+      .map((detail) => detail.message)
+      .join(", ");
+    return res.status(400).json({ message: errorMessages });
+  }
+
+  try {
+    const cekFaction = await Faction.findById(_id);
+
+    if (!cekFaction) {
+      return res.status(404).json({ message: "Faction tidak ditemukan!" });
+    }
+
+    cekFaction.name = name;
+    cekFaction.description = description;
+
+    await cekFaction.save();
+
+    return res
+      .status(200)
+      .json({ message: `Faction ${cekFaction.name} berhasil diperbarui!` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const deleteFaction = async (req, res) => {
+  const { _id } = req.params;
+
+  try {
+    const cekFaction = await Faction.findById(_id);
+    if (!cekFaction) {
+      return res.status(404).json({ message: "Faction tidak ditemukan!" });
+    }
+
+    await Faction.deleteOne({ _id });
+    return res
+      .status(200)
+      .json({ message: `Faction ${cekFaction.name} berhasil dihapus!` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getAllLeader = async (req, res) => {
+  try {
+    const leader = await Leader.find();
+    return res.status(200).json(leader);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getLeaderByQuery = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const leader = await Leader.findById(id);
+    if (!leader) {
+      return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+    }
+    return res.status(200).json(leader);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -571,6 +547,29 @@ const deleteLeader = async (req, res) => {
   }
 };
 
+const getAllTypeCard = async (req, res) => {
+  try {
+    const typecards = await TypeCard.find();
+    return res.status(200).json(typecards);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getTypeCardByQuery = async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const typecard = await TypeCard.findById(id);
+    if (!typecard) {
+      return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+    }
+    return res.status(200).json(typecard);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 const tambahTypeCard = async (req, res) => {
   const { name, description } = req.body;
 
@@ -660,21 +659,29 @@ const deleteTypeCard = async (req, res) => {
 };
 
 module.exports = {
-  register,
-  login,
   getCardApi,
+  getAllCard,
+  getCardByQuery,
   tambahCard,
   updateCard,
   deleteCard,
-  tambahFaction,
-  updateFaction,
-  deleteFaction,
+  getAllAbilities,
+  getAbilitiesByQuery,
   tambahAbility,
   updateAbility,
   deleteAbility,
+  getAllFaction,
+  getFactionByQuery,
+  tambahFaction,
+  updateFaction,
+  deleteFaction,
+  getAllLeader,
+  getLeaderByQuery,
   tambahLeader,
   updateLeader,
   deleteLeader,
+  getAllTypeCard,
+  getTypeCardByQuery,
   tambahTypeCard,
   updateTypeCard,
   deleteTypeCard,
