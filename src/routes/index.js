@@ -1,6 +1,6 @@
-const cardRouter = require("./card");
-const DecksRouter = require("./decks");
-const userRouter = require("./user");
+const cardRouter = require("./cardRoute");
+const DecksRouter = require("./deckRoute");
+const userRouter = require("./userRoute");
 
 module.exports = {
   cardRouter,

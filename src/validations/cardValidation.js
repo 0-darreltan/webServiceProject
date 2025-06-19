@@ -15,18 +15,12 @@ const cardValidation = Joi.object({
     "string.base": `Tipe harus string`,
     "any.required": `Tipe tidak boleh kosong`,
   }),
-  ability: Joi.array()
-    .items(Joi.string().empty(""))
-    .min(0)
-    .max(2)
-    .optional()
-    .messages({
-      "array.base": `Ability harus array`,
-      "array.min": `Ability minimal harus 0`,
-      "array.max": `Ability maksimal hanya boleh 2`,
-      "string.base": `Setiap ability di dalam array harus berupa teks`,
-      "string.empty": `Ability di dalam array tidak boleh kosong`,
-    }),
+  ability: Joi.array().items(Joi.string()).min(0).max(2).optional().messages({
+    "array.base": `Ability harus array`,
+    "array.min": `Ability minimal harus 0`,
+    "array.max": `Ability maksimal hanya boleh 2`,
+    "string.base": `Setiap ability di dalam array harus berupa teks`,
+  }),
   power: Joi.number().min(0).max(20).required().messages({
     "any.required": `Power tidak boleh kosong`,
     "number.min": `Power minimal 0`,

@@ -29,19 +29,57 @@ const getCardApi = async (req, res) => {
 };
 
 const getAllCard = async (req, res) => {
+  const { ability, faction, type } = req.query;
+
   try {
-    const cards = await Card.find();
+    let search = {};
+    if (ability) {
+      const cekAbility = await Ability.findOne({
+        name: new RegExp(`${ability}`, "i"),
+      });
+      if (!cekAbility) {
+        return res.status(404).json({ message: "Ability tidak ditemukan!" });
+      }
+
+      search.ability = cekAbility._id;
+    }
+
+    if (faction) {
+      const cekFaction = await Faction.findOne({
+        name: new RegExp(`${faction}`, "i"),
+      });
+      if (!cekFaction) {
+        return res.status(404).json({ message: "Faction tidak ditemukan!" });
+      }
+      search.faction = cekFaction._id;
+    }
+
+    if (type) {
+      const cekType = await TypeCard.findOne({
+        name: new RegExp(`${type}`, "i"),
+      });
+      if (!cekType) {
+        return res.status(404).json({ message: "Type tidak ditemukan!" });
+      }
+      search.typeCard = cekType._id;
+    }
+
+    const cards = await Card.find(search)
+      .populate("faction", "name")
+      .populate("typeCard", "name")
+      .populate("ability", "name");
+
     return res.status(200).json(cards);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const getCardByQuery = async (req, res) => {
-  const { id } = req.params;
+const getSingleCard = async (req, res) => {
+  const { _id } = req.params;
 
   try {
-    const card = await Card.findById(id);
+    const card = await Card.findById(_id);
     if (!card) {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
@@ -200,19 +238,27 @@ const deleteCard = async (req, res) => {
 };
 
 const getAllAbilities = async (req, res) => {
+  const { name } = req.query;
   try {
-    const abilities = await Ability.find();
+    let search = {};
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const abilities = await Ability.find(search);
+
     return res.status(200).json(abilities);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const getAbilitiesByQuery = async (req, res) => {
-  const { id } = req.params;
+const getSingleAbility = async (req, res) => {
+  const { _id } = req.params;
 
   try {
-    const ability = await Ability.findById(id);
+    const ability = await Ability.findById(_id);
     if (!ability) {
       return res.status(404).json({ message: "Ability tidak ditemukan!" });
     }
@@ -311,19 +357,27 @@ const deleteAbility = async (req, res) => {
 };
 
 const getAllFaction = async (req, res) => {
+  const { name } = req.query;
   try {
-    const factions = await Faction.find();
+    let search = {};
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const factions = await Faction.find(search);
+
     return res.status(200).json(factions);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const getFactionByQuery = async (req, res) => {
-  const { id } = req.params;
+const getSingleFaction = async (req, res) => {
+  const { _id } = req.params;
 
   try {
-    const faction = await Faction.findById(id);
+    const faction = await Faction.findById(_id);
     if (!faction) {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
@@ -422,19 +476,27 @@ const deleteFaction = async (req, res) => {
 };
 
 const getAllLeader = async (req, res) => {
+  const { name } = req.query;
   try {
-    const leader = await Leader.find();
-    return res.status(200).json(leader);
+    let search = {};
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const leaders = await Leader.find(search);
+
+    return res.status(200).json(leaders);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const getLeaderByQuery = async (req, res) => {
-  const { id } = req.params;
+const getSingleLeader = async (req, res) => {
+  const { _id } = req.params;
 
   try {
-    const leader = await Leader.findById(id);
+    const leader = await Leader.findById(_id);
     if (!leader) {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
@@ -548,19 +610,27 @@ const deleteLeader = async (req, res) => {
 };
 
 const getAllTypeCard = async (req, res) => {
+  const { name } = req.query;
   try {
-    const typecards = await TypeCard.find();
+    let search = {};
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const typecards = await TypeCard.find(search);
+
     return res.status(200).json(typecards);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
 };
 
-const getTypeCardByQuery = async (req, res) => {
-  const { id } = req.params;
+const getSingleTypeCard = async (req, res) => {
+  const { _id } = req.params;
 
   try {
-    const typecard = await TypeCard.findById(id);
+    const typecard = await TypeCard.findById(_id);
     if (!typecard) {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
@@ -661,27 +731,27 @@ const deleteTypeCard = async (req, res) => {
 module.exports = {
   getCardApi,
   getAllCard,
-  getCardByQuery,
+  getSingleCard,
   tambahCard,
   updateCard,
   deleteCard,
   getAllAbilities,
-  getAbilitiesByQuery,
+  getSingleAbility,
   tambahAbility,
   updateAbility,
   deleteAbility,
   getAllFaction,
-  getFactionByQuery,
+  getSingleFaction,
   tambahFaction,
   updateFaction,
   deleteFaction,
   getAllLeader,
-  getLeaderByQuery,
+  getSingleLeader,
   tambahLeader,
   updateLeader,
   deleteLeader,
   getAllTypeCard,
-  getTypeCardByQuery,
+  getSingleTypeCard,
   tambahTypeCard,
   updateTypeCard,
   deleteTypeCard,

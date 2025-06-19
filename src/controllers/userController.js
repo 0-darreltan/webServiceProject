@@ -101,7 +101,7 @@ const getAllDecks = async (req, res) => {
   // Implementasi untuk mendapatkan decks
   res.status(501).json({ message: "Fitur ini belum diimplementasikan." });
 };
-const getDecks = async (req, res) => {
+const getSingleDeck = async (req, res) => {
   // Implementasi untuk mendapatkan decks
   res.status(501).json({ message: "Fitur ini belum diimplementasikan." });
 };
@@ -117,8 +117,42 @@ const deleteDecks = async (req, res) => {
 };
 
 const topup = async (req, res) => {
-  // Implementasi untuk topup
-  res.status(501).json({ message: "Fitur ini belum diimplementasikan." });
+  const { _id } = req.params;
+  const { amount } = req.body;
+
+  try {
+    const yangLogin = req.user;
+
+    if (yangLogin._id.toString() !== _id) {
+      return res
+        .status(403)
+        .json({ message: "Tidak boleh melakukan topup untuk user lain" });
+    }
+
+    if (amount < 5000) {
+      return res.status(400).json({
+        message: "Topup minimal Rp 5000 untuk mendapatkan 1 saldo!",
+      });
+    }
+
+    const cekUser = await User.findById(_id);
+
+    if (!cekUser) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    let total = Math.floor(Number(amount) / 5000);
+
+    cekUser.saldo += total;
+
+    await cekUser.save();
+
+    return res.status(200).json({
+      message: `Topup berhasil! Saldo ${cekUser.username} sekarang Rp ${cekUser.saldo}`,
+    });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
 };
 
 module.exports = {
@@ -126,7 +160,7 @@ module.exports = {
   login,
   createDecks,
   getAllDecks,
-  getDecks,
+  getSingleDeck,
   updateDecks,
   deleteDecks,
   topup,
