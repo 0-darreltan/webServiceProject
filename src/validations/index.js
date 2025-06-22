@@ -5,7 +5,12 @@ const {
   abilityValidation,
   leaderValidation,
 } = require("./cardValidation");
-const { registerValidation, loginValidation } = require("./userValidation");
+
+const {
+  registerValidation,
+  loginValidation,
+  deckValidation,
+} = require("./userValidation");
 
 module.exports = {
   registerValidation,
@@ -15,4 +20,5 @@ module.exports = {
   typeValidation,
   abilityValidation,
   leaderValidation,
+  deckValidation,
 };

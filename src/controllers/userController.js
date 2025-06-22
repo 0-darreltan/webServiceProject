@@ -1,7 +1,18 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const { User, Deck } = require("../models");
-const { registerValidation, loginValidation } = require("../validations");
+const {
+  User,
+  Deck,
+  Card,
+  Leader,
+  HistoryTopup,
+  HistoryPlay,
+} = require("../models");
+const {
+  registerValidation,
+  loginValidation,
+  deckValidation,
+} = require("../validations");
 
 const register = async (req, res) => {
   const { username, email, password, role } = req.body;
@@ -98,13 +109,10 @@ const createDecks = async (req, res) => {
   try {
     const yangLogin = req.user;
 
-    // Parsing untuk URL-encoded data
     if (typeof cards === "string") {
       try {
-        // Coba parse sebagai JSON jika dikirim sebagai string
         cards = JSON.parse(cards);
       } catch (e) {
-        // Jika gagal, coba split dengan koma
         cards = cards.split(",").map((card) => card.trim());
       }
     }
@@ -118,28 +126,15 @@ const createDecks = async (req, res) => {
       typeof cards
     );
 
-    // Validasi input
-    if (!name || !cards) {
-      return res.status(400).json({
-        message: "Nama deck dan array kartu harus diisi!",
-      });
+    try {
+      await deckValidation.validateAsync(req.body, { abortEarly: false });
+    } catch (validationError) {
+      const errorMessages = validationError.details
+        .map((detail) => detail.message)
+        .join(", ");
+      return res.status(400).json({ message: errorMessages });
     }
 
-    // Validasi cards harus berupa array
-    if (!Array.isArray(cards)) {
-      return res.status(400).json({
-        message: "Kartu harus berupa array!",
-      });
-    }
-
-    // Validasi minimal 22 kartu
-    if (cards.length < 22) {
-      return res.status(400).json({
-        message: "Deck harus memiliki minimal 22 kartu!",
-      });
-    }
-
-    // Cek apakah deck dengan nama yang sama sudah ada untuk user ini
     const existingDeck = await Deck.findOne({
       name: name,
       user: yangLogin._id,
@@ -149,15 +144,14 @@ const createDecks = async (req, res) => {
       return res.status(400).json({
         message: "Deck dengan nama tersebut sudah ada!",
       });
-    } // Validasi kartu yang dipilih ada di database
-    const { Card, Leader } = require("../models");
+    }
+
     const validCards = await Card.find({ name: { $in: cards } }).populate(
       "faction",
       "name"
     );
 
     if (validCards.length !== cards.length) {
-      // Cari kartu yang tidak valid
       const validCardNames = validCards.map((card) => card.name);
       const invalidCards = cards.filter(
         (cardName) => !validCardNames.includes(cardName)
@@ -173,71 +167,67 @@ const createDecks = async (req, res) => {
       });
     }
 
-    // Validasi semua kartu harus 1 faction
-    const factions = validCards
-      .map((card) => card.faction?._id?.toString())
+    const factionNames = validCards
+      .map((card) => card.faction?.name) // Ambil nama, bukan _id. Gunakan ?. untuk keamanan.
       .filter(Boolean);
-    const uniqueFactions = [...new Set(factions)];
 
-    if (uniqueFactions.length > 1) {
+    const uniqueFactionNames = [...new Set(factionNames)];
+
+    const mainFactions = uniqueFactionNames.filter(
+      (name) => name.toLowerCase() !== "neutral"
+    );
+
+    if (mainFactions.length > 1) {
+      // Jika lebih dari 1, berarti ada campuran faksi utama yang tidak diizinkan.
+      // Contoh: ['Northern Realms', 'Nilfgaard']
       return res.status(400).json({
-        message: "Semua kartu dalam deck harus berasal dari faction yang sama!",
+        message:
+          "Deck tidak valid. Hanya boleh mencampurkan satu faksi utama dengan kartu Neutral.",
+        conflictingFactions: mainFactions, // Opsional: Beri tahu faksi apa saja yang konflik
       });
     }
 
-    if (uniqueFactions.length === 0) {
-      return res.status(400).json({
-        message: "Kartu harus memiliki faction yang valid!",
-      });
-    }
-    const deckFaction = uniqueFactions[0];
+    // Jika lolos, Anda bisa lanjut.
+    // Di sini Anda juga bisa menentukan faksi utama dari deck tersebut.
+    const deckFactionName =
+      mainFactions.length === 1 ? mainFactions[0] : "Neutral";
 
-    // Ambil ID dari kartu yang valid untuk disimpan
     const cardIds = validCards.map((card) => card._id);
 
     console.log("Valid cards found:", validCards.length);
     console.log("Card IDs to save:", cardIds);
     console.log("Sample card object:", validCards[0]);
 
-    // Validasi leader jika ada
-    let validLeader = null;
-    let leaderId = null;
-    if (leader) {
-      validLeader = await Leader.findOne({ name: leader }).populate("faction");
-      if (!validLeader) {
-        return res.status(400).json({
-          message: "Leader yang dipilih tidak valid!",
-        });
-      }
+    const validLeader = await Leader.findOne({ name: leader }).populate(
+      "faction"
+    );
 
-      // Validasi leader harus sama faction dengan kartu
-      if (validLeader.faction._id.toString() !== deckFaction) {
-        return res.status(400).json({
-          message: "Leader harus berasal dari faction yang sama dengan kartu!",
-        });
-      }
+    if (!validLeader) {
+      return res.status(400).json({
+        message: "Leader yang dipilih tidak valid!",
+      });
+    }
 
-      leaderId = validLeader._id;
-    } // Buat deck baru
+    if (validLeader.faction.name.toString() !== deckFactionName) {
+      return res.status(400).json({
+        message: "Leader harus berasal dari faction yang sama dengan kartu!",
+      });
+    }
+
     const newDeck = await Deck.create({
       name: name,
       user: yangLogin._id,
-      cards: cardIds, // Simpan ID kartu, bukan nama
-      leader: leaderId || null, // Simpan ID leader, bukan nama
-      totalCards: cards.length,
+      cards: cardIds,
+      leader: validLeader._id,
     });
-
-    console.log("Deck berhasil dibuat dengan cards:", cardIds);
-    console.log("New deck object:", newDeck);
 
     return res.status(201).json({
       message: "Deck berhasil dibuat!",
       deck: {
         id: newDeck._id,
         name: newDeck.name,
-        totalCards: newDeck.totalCards,
-        leader: validLeader ? validLeader.name : null,
-        cardsIds: cardIds, // Tambahkan untuk debugging
+        leader: validLeader.name,
+        cardsIds: cardIds,
       },
     });
   } catch (error) {
@@ -245,14 +235,21 @@ const createDecks = async (req, res) => {
   }
 };
 
-const getAllDecks = async (req, res) => {
+const getDecks = async (req, res) => {
+  const { name } = req.query;
+
   try {
     const yangLogin = req.user;
 
-    // Ambil semua deck milik user yang login
-    const decks = await Deck.find({ user: yangLogin._id })
-      .populate("leader", "name effect")
-      .populate("cards", "name power"); // Fix: "cards" bukan "card"
+    const search = { user: yangLogin._id };
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const decks = await Deck.find(search)
+      .populate("leader", "name")
+      .populate("cards", "name");
 
     console.log("Found decks:", decks.length);
     if (decks.length > 0) {
@@ -269,11 +266,9 @@ const getAllDecks = async (req, res) => {
     const deckList = decks.map((deck) => ({
       id: deck._id,
       name: deck.name,
-      totalCards: deck.totalCards,
-      leader: deck.leader ? deck.leader.name : null,
+      leader: deck.leader.name,
       cardsCount: deck.cards.length,
-      cards: deck.cards.map((card) => card.name), // Tambahkan list nama kartu
-      createdAt: deck.createdAt,
+      cards: deck.cards.map((card) => card.name),
     }));
 
     return res.status(200).json({
@@ -286,15 +281,15 @@ const getAllDecks = async (req, res) => {
     return res.status(500).json({ message: error.message });
   }
 };
+
 const getSingleDeck = async (req, res) => {
-  const { name } = req.params;
+  const { _id } = req.params;
 
   try {
     const yangLogin = req.user;
 
-    // Cari deck berdasarkan ID dan user yang login
     const deck = await Deck.findOne({
-      name: name,
+      _id: _id,
       user: yangLogin._id,
     })
       .populate("leader", "name effect")
@@ -318,24 +313,19 @@ const getSingleDeck = async (req, res) => {
       deck: {
         id: deck._id,
         name: deck.name,
-        totalCards: deck.totalCards,
-        leader: deck.leader
-          ? {
-              id: deck.leader._id,
-              name: deck.leader.name,
-              effect: deck.leader.effect,
-            }
-          : null,
+        leader: {
+          id: deck.leader._id,
+          name: deck.leader.name,
+          effect: deck.leader.effect,
+        },
         cards: deck.cards.map((card) => ({
           id: card._id,
           name: card.name,
           power: card.power,
-          faction: card.faction ? card.faction.name : null,
-          type: card.typeCard ? card.typeCard.name : null,
+          faction: card.faction.name,
+          type: card.typeCard.name,
           abilities: card.ability ? card.ability.map((ab) => ab.name) : [],
         })),
-        createdAt: deck.createdAt,
-        updatedAt: deck.updatedAt,
       },
     });
   } catch (error) {
@@ -344,19 +334,16 @@ const getSingleDeck = async (req, res) => {
 };
 
 const updateDecks = async (req, res) => {
-  const { id } = req.params;
+  const { _id } = req.params;
   let { name, cards, leader } = req.body;
 
   try {
     const yangLogin = req.user;
 
-    // Parsing untuk URL-encoded data (sama seperti createDecks)
     if (typeof cards === "string") {
       try {
-        // Coba parse sebagai JSON jika dikirim sebagai string
         cards = JSON.parse(cards);
       } catch (e) {
-        // Jika gagal, coba split dengan koma
         cards = cards.split(",").map((card) => card.trim());
       }
     }
@@ -370,9 +357,8 @@ const updateDecks = async (req, res) => {
       typeof cards
     );
 
-    // Cari deck yang akan diupdate
     const deck = await Deck.findOne({
-      _id: id,
+      _id: _id,
       user: yangLogin._id,
     });
 
@@ -380,34 +366,22 @@ const updateDecks = async (req, res) => {
       return res.status(404).json({
         message: "Deck tidak ditemukan atau bukan milik Anda!",
       });
-    } // Validasi input
-    if (!name || !cards || !Array.isArray(cards)) {
-      console.log(
-        "Invalid input - name:",
-        name,
-        "cards:",
-        cards,
-        "isArray:",
-        Array.isArray(cards)
-      );
-      return res.status(400).json({
-        message: "Nama deck dan array kartu harus diisi!",
-      });
     }
 
-    // Validasi minimal 22 kartu
-    if (cards.length < 22) {
-      return res.status(400).json({
-        message: "Deck harus memiliki minimal 22 kartu!",
-      });
+    try {
+      await deckValidation.validateAsync(req.body, { abortEarly: false });
+    } catch (validationError) {
+      const errorMessages = validationError.details
+        .map((detail) => detail.message)
+        .join(", ");
+      return res.status(400).json({ message: errorMessages });
     }
 
-    // Cek apakah nama deck sudah digunakan oleh deck lain dari user yang sama
     if (name !== deck.name) {
       const existingDeck = await Deck.findOne({
         name: name,
         user: yangLogin._id,
-        _id: { $ne: id },
+        _id: { $ne: _id },
       });
 
       if (existingDeck) {
@@ -415,15 +389,14 @@ const updateDecks = async (req, res) => {
           message: "Nama deck sudah digunakan oleh deck lain!",
         });
       }
-    } // Validasi kartu yang dipilih ada di database
-    const { Card, Leader } = require("../models");
+    }
+
     const validCards = await Card.find({ name: { $in: cards } }).populate(
       "faction",
       "name"
     );
 
     if (validCards.length !== cards.length) {
-      // Cari kartu yang tidak valid
       const validCardNames = validCards.map((card) => card.name);
       const invalidCards = cards.filter(
         (cardName) => !validCardNames.includes(cardName)
@@ -439,49 +412,47 @@ const updateDecks = async (req, res) => {
       });
     }
 
-    // Validasi semua kartu harus 1 faction
-    const factions = validCards
-      .map((card) => card.faction?._id?.toString())
+    const factionNames = validCards
+      .map((card) => card.faction?.name)
       .filter(Boolean);
-    const uniqueFactions = [...new Set(factions)];
 
-    if (uniqueFactions.length > 1) {
+    const uniqueFactionNames = [...new Set(factionNames)];
+
+    const mainFactions = uniqueFactionNames.filter(
+      (name) => name.toLowerCase() !== "neutral"
+    );
+
+    if (mainFactions.length > 1) {
       return res.status(400).json({
-        message: "Semua kartu dalam deck harus berasal dari faction yang sama!",
+        message:
+          "Deck tidak valid. Hanya boleh mencampurkan satu faksi utama dengan kartu Neutral.",
+        conflictingFactions: mainFactions,
       });
     }
 
-    if (uniqueFactions.length === 0) {
-      return res.status(400).json({
-        message: "Kartu harus memiliki faction yang valid!",
-      });
-    }
+    const deckFactionName =
+      mainFactions.length === 1 ? mainFactions[0] : "Neutral";
 
-    const deckFaction = uniqueFactions[0];
-
-    // Ambil ID dari kartu yang valid untuk disimpan
     const cardIds = validCards.map((card) => card._id);
 
-    // Validasi leader jika ada
-    let validLeader = null;
-    if (leader) {
-      validLeader = await Leader.findOne({ name: leader }).populate("faction");
-      if (!validLeader) {
-        return res.status(400).json({
-          message: "Leader yang dipilih tidak valid!",
-        });
-      }
+    const validLeader = await Leader.findOne({ name: leader }).populate(
+      "faction"
+    );
+    if (!validLeader) {
+      return res.status(400).json({
+        message: "Leader yang dipilih tidak valid!",
+      });
+    }
 
-      // Validasi leader harus sama faction dengan kartu
-      if (validLeader.faction._id.toString() !== deckFaction) {
-        return res.status(400).json({
-          message: "Leader harus berasal dari faction yang sama dengan kartu!",
-        });
-      }
-    } // Update deck
+    if (validLeader.faction.name.toString() !== deckFactionName) {
+      return res.status(400).json({
+        message: "Leader harus berasal dari faction yang sama dengan kartu!",
+      });
+    }
+
     deck.name = name;
-    deck.cards = cardIds; // Simpan ID kartu, bukan nama
-    deck.leader = validLeader ? validLeader._id : null; // Simpan ID leader, bukan nama
+    deck.cards = cardIds;
+    deck.leader = validLeader._id;
     deck.totalCards = cards.length;
 
     await deck.save();
@@ -491,8 +462,8 @@ const updateDecks = async (req, res) => {
       deck: {
         id: deck._id,
         name: deck.name,
-        totalCards: deck.totalCards,
-        leader: validLeader ? validLeader.name : null,
+        leader: deck.leader,
+        cards: deck.cards,
       },
     });
   } catch (error) {
@@ -501,14 +472,14 @@ const updateDecks = async (req, res) => {
 };
 
 const deleteDecks = async (req, res) => {
-  const { id } = req.params;
+  const { _id } = req.params;
 
   try {
     const yangLogin = req.user;
 
     // Cari deck yang akan dihapus
     const deck = await Deck.findOne({
-      _id: id,
+      _id: _id,
       user: yangLogin._id,
     });
 
@@ -519,10 +490,10 @@ const deleteDecks = async (req, res) => {
     }
 
     // Hapus deck
-    await Deck.deleteOne({ _id: id });
+    await Deck.deleteOne({ _id });
 
     return res.status(200).json({
-      message: `Deck "${deck.name}" berhasil dihapus!`,
+      message: `Deck ${deck.name} berhasil dihapus!`,
     });
   } catch (error) {
     return res.status(500).json({ message: error.message });
@@ -530,17 +501,10 @@ const deleteDecks = async (req, res) => {
 };
 
 const topup = async (req, res) => {
-  const { _id } = req.params;
   const { amount } = req.body;
 
   try {
     const yangLogin = req.user;
-
-    if (yangLogin._id.toString() !== _id) {
-      return res
-        .status(403)
-        .json({ message: "Tidak boleh melakukan topup untuk user lain" });
-    }
 
     if (amount < 5000) {
       return res.status(400).json({
@@ -548,7 +512,7 @@ const topup = async (req, res) => {
       });
     }
 
-    const cekUser = await User.findById(_id);
+    const cekUser = await User.findById(yangLogin._id);
 
     if (!cekUser) {
       return res.status(404).json({ message: "User tidak ditemukan!" });
@@ -560,8 +524,73 @@ const topup = async (req, res) => {
 
     await cekUser.save();
 
+    const history = HistoryTopup.create({
+      user: cekUser._id,
+      amount: total,
+    });
+
     return res.status(200).json({
       message: `Topup berhasil! Saldo ${cekUser.username} sekarang Rp ${cekUser.saldo}`,
+    });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
+
+const getHistoryTopup = async (req, res) => {
+  try {
+    const yangLogin = req.user;
+
+    const history = await HistoryTopup.find({ user: yangLogin._id }).populate(
+      "user",
+      "username"
+    );
+
+    if (history.length === 0) {
+      return res.status(200).json({
+        message: "Belum ada history topup!",
+        history: [],
+      });
+    }
+
+    const historyList = history.map((item) => ({
+      amount: item.amount,
+      time: item.createdAt,
+    }));
+
+    return res.status(200).json({
+      message: "Berhasil mengambil history topup!",
+      total: history.length,
+      history: historyList,
+    });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
+
+const getDetailHtopup = async (req, res) => {
+  try {
+    const history = await HistoryTopup.find({}).populate("user", "username");
+
+    if (history.length === 0) {
+      return res.status(200).json({
+        message: "Belum ada history topup!",
+        history: [],
+      });
+    }
+
+    const historyList = history.map((item) => ({
+      id: item._id,
+      user: item.user.username,
+      amount: item.amount,
+      createdAt: item.createdAt,
+      updatedAt: item.updatedAt,
+    }));
+
+    return res.status(200).json({
+      message: "Berhasil mengambil riwayat topup!",
+      total: history.length,
+      history: historyList,
     });
   } catch (error) {
     return res.status(400).json({ message: error.message });
@@ -572,9 +601,11 @@ module.exports = {
   register,
   login,
   createDecks,
-  getAllDecks,
+  getDecks,
   getSingleDeck,
   updateDecks,
   deleteDecks,
   topup,
+  getHistoryTopup,
+  getDetailHtopup,
 };

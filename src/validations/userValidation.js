@@ -36,7 +36,24 @@ const loginValidation = Joi.object({
   }),
 });
 
+const deckValidation = Joi.object({
+  name: Joi.string().alphanum().required().messages({
+    "string.base": `Username harus string`,
+    "string.alphanum": `Username hanya boleh alfanumerik`,
+    "any.required": `Username tidak boleh kosong`,
+  }),
+  cards: Joi.string().required().messages({
+    "string.base": `Cards harus array`,
+    "any.required": `Cards tidak boleh kosong`,
+  }),
+  leader: Joi.string().required().messages({
+    "string.base": `Leader harus string`,
+    "any.required": `Leader tidak boleh kosong`,
+  }),
+});
+
 module.exports = {
   registerValidation,
   loginValidation,
+  deckValidation,
 };
