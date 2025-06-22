@@ -12,7 +12,11 @@ const {
   deleteDecks,
   getHistoryTopup,
   getDetailHtopup,
-} = require("../controllers/UserController");
+  playGame,
+  getHistoryPlayAsPlayer,
+  getHistoryPlayAsAdmin
+
+} = require("../controllers/userController");
 
 const verifyApiKey = require("../middlewares/verifyApiKey");
 const cekAdmin = require("../middlewares/cekAdmin");
@@ -28,5 +32,8 @@ router.delete("/decks/:_id", [verifyApiKey], deleteDecks);
 router.post("/topup", [verifyApiKey], topup);
 router.get("/topup/history", [verifyApiKey], getHistoryTopup);
 router.get("/topup/history/detail", [verifyApiKey, cekAdmin], getDetailHtopup);
+router.post("/play", [verifyApiKey], playGame);
+router.get("/history/play/player", [verifyApiKey], getHistoryPlayAsPlayer);
+router.get("/history/play/admin/:_id", [verifyApiKey, cekAdmin], getHistoryPlayAsAdmin);
 
 module.exports = router;
