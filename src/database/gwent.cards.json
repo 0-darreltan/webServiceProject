@@ -1,0 +1,986 @@
+[{
+  "_id": {
+    "$oid": "6853f1197f95d4c2a2c5388d"
+  },
+  "name": "Kaedweni Siege Expert",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853f295b71a926cce8ffe2d"
+  },
+  "name": "Redanian Foot Soldier",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6853f2efb71a926cce8ffe34"
+  },
+  "name": "Poor Fucking Infantry",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685401bbb71a926cce8ffe46"
+  },
+  "name": "Thaler",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685401f48bed6dbcfb53a814"
+  },
+  "name": "Yarpen Zigrin",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402238bed6dbcfb53a81b"
+  },
+  "name": "Blue Stripes Commando",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402538bed6dbcfb53a821"
+  },
+  "name": "Sheldon Skaggs",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402688bed6dbcfb53a827"
+  },
+  "name": "Sabrina Glevissig",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402868bed6dbcfb53a82e"
+  },
+  "name": "Sigismund Dijkstra",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402a68bed6dbcfb53a835"
+  },
+  "name": "Dun Banner Medic",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499c8f8ceafc3c4ea107fd"
+    }
+  ],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402cc8bed6dbcfb53a83c"
+  },
+  "name": "Crinfrid Reavers Dragon Hunter",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402e58bed6dbcfb53a843"
+  },
+  "name": "Prince Stennis",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685402fd8bed6dbcfb53a849"
+  },
+  "name": "Síle de Tansarville",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403138bed6dbcfb53a84f"
+  },
+  "name": "Keira Metz",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854032d8bed6dbcfb53a855"
+  },
+  "name": "Siegfried of Denesle",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403418bed6dbcfb53a85b"
+  },
+  "name": "Ves",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403618bed6dbcfb53a861"
+  },
+  "name": "Siege Tower",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854037d8bed6dbcfb53a867"
+  },
+  "name": "Ballista",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854038c8bed6dbcfb53a86d"
+  },
+  "name": "Trebuchet",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854039f8bed6dbcfb53a873"
+  },
+  "name": "Dethmold",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403bc8bed6dbcfb53a87a"
+  },
+  "name": "Catapult",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 8,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403dd8bed6dbcfb53a881"
+  },
+  "name": "Philippa Eilhart",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685403f38bed6dbcfb53a888"
+  },
+  "name": "Esterad Thyssen",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685404038bed6dbcfb53a88f"
+  },
+  "name": "John Natalis",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685404128bed6dbcfb53a896"
+  },
+  "name": "Vernon Roche",
+  "faction": {
+    "$oid": "684999a5185b94bdd00a58e4"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854054d8bed6dbcfb53a89d"
+  },
+  "name": "Havekar Healer",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499c8f8ceafc3c4ea107fd"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685405678bed6dbcfb53a8a3"
+  },
+  "name": "Riordain",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 1,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685405878bed6dbcfb53a8aa"
+  },
+  "name": "Elven Skirmisher",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854059a8bed6dbcfb53a8b0"
+  },
+  "name": "Toruviel",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 2,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685405b88bed6dbcfb53a8b7"
+  },
+  "name": "Dwarven Skirmisher",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 3,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685405fd8bed6dbcfb53a8c2"
+  },
+  "name": "Ciaran aep Easnillien",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 3,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854063f8bed6dbcfb53a8c8"
+  },
+  "name": "Dol Blathanna Archer",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406558bed6dbcfb53a8ce"
+  },
+  "name": "Vrihedd Brigade Recruit",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 4,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854066d8bed6dbcfb53a8d4"
+  },
+  "name": "Mahakaman Defender",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406868bed6dbcfb53a8da"
+  },
+  "name": "Vrihedd Brigade Veteran",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406aa8bed6dbcfb53a8e1"
+  },
+  "name": "Havekar Smuggler",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 5,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406c98bed6dbcfb53a8e7"
+  },
+  "name": "Dol Blathanna Scout",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406de8bed6dbcfb53a8ed"
+  },
+  "name": "Barclay Els",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685406f18bed6dbcfb53a8f3"
+  },
+  "name": "Yaevinn",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685407068bed6dbcfb53a8f9"
+  },
+  "name": "Filavandrel aen Fidhail",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854071a8bed6dbcfb53a8ff"
+  },
+  "name": "Ida Emean aep Sivney",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685407338bed6dbcfb53a905"
+  },
+  "name": "Dennis Cranmer",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 6,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854075a8bed6dbcfb53a90c"
+  },
+  "name": "Schirru",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499c4a8ceafc3c4ea107f1"
+    }
+  ],
+  "power": 8,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685407758bed6dbcfb53a913"
+  },
+  "name": "Milva",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6854078f8bed6dbcfb53a91a"
+  },
+  "name": "Iorveth",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685408f98bed6dbcfb53a92c"
+  },
+  "name": "Isengrim Faoiltiarna",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685409288bed6dbcfb53a933"
+  },
+  "name": "Saesenthessis",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685409438bed6dbcfb53a93a"
+  },
+  "name": "Eithné",
+  "faction": {
+    "$oid": "684999bd185b94bdd00a58e8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b088bed6dbcfb53a962"
+  },
+  "name": "Decoy",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409a18bed6dbcfb53a93e"
+  },
+  "ability": [
+    {
+      "$oid": "68499bf08ceafc3c4ea107dd"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b388bed6dbcfb53a96e"
+  },
+  "name": "Commander’s Horn",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409a18bed6dbcfb53a93e"
+  },
+  "ability": [
+    {
+      "$oid": "68499bca8ceafc3c4ea107d9"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b478bed6dbcfb53a975"
+  },
+  "name": "Scorch",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409a18bed6dbcfb53a93e"
+  },
+  "ability": [
+    {
+      "$oid": "68499c4a8ceafc3c4ea107f1"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b598bed6dbcfb53a97c"
+  },
+  "name": "Mardroeme",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409a18bed6dbcfb53a93e"
+  },
+  "ability": [
+    {
+      "$oid": "68540a348bed6dbcfb53a947"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b778bed6dbcfb53a983"
+  },
+  "name": "Skellige Storm",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "ability": [
+    {
+      "$oid": "68540a888bed6dbcfb53a957"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540b8b8bed6dbcfb53a98a"
+  },
+  "name": "Clear Weather",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "ability": [
+    {
+      "$oid": "68540a938bed6dbcfb53a95b"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540ba18bed6dbcfb53a991"
+  },
+  "name": "Torrential Rain",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "ability": [
+    {
+      "$oid": "68540a7b8bed6dbcfb53a953"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540bb58bed6dbcfb53a998"
+  },
+  "name": "Impenetrable Fog",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "ability": [
+    {
+      "$oid": "68540a608bed6dbcfb53a94f"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540bc88bed6dbcfb53a99f"
+  },
+  "name": "Biting Frost",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "ability": [
+    {
+      "$oid": "68540a508bed6dbcfb53a94b"
+    }
+  ],
+  "power": 0,
+  "__v": 0
+}]

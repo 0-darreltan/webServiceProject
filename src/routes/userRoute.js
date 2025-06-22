@@ -17,11 +17,11 @@ const verifyApiKey = require("../middlewares/verifyApiKey");
 router.post("/register", register);
 router.post("/login", login);
 
-router.post("/decks/create", createDecks);
-router.get("/decks/get/", getAllDecks);
-router.get("/decks/get/:id", getSingleDeck);
-router.put("/decks/update/:id", updateDecks);
-router.delete("/decks/delete/:id", deleteDecks);
+router.post("/decks/create", verifyApiKey, createDecks);
+router.get("/decks/get/", verifyApiKey, getAllDecks);
+router.get("/decks/get/:name", verifyApiKey, getSingleDeck);
+router.put("/decks/update/:id", verifyApiKey, updateDecks);
+router.delete("/decks/delete/:id", verifyApiKey, deleteDecks);
 router.post("/topup/:_id", [verifyApiKey], topup);
 
 module.exports = router;

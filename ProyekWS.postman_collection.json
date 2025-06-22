@@ -305,6 +305,14 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getFaction",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -438,6 +446,14 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getTypeCard",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
 				}
 			]
 		},
@@ -558,6 +574,14 @@
 								""
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAbility",
+					"request": {
+						"method": "GET",
+						"header": []
 					},
 					"response": []
 				}
@@ -712,84 +736,140 @@
 			]
 		},
 		{
-			"name": "register",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "AaronGanteng",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "aaronganteng@gmail.com",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "aaron123",
-							"type": "text"
-						},
-						{
-							"key": "role",
-							"value": "admin",
-							"type": "text"
-						}
-					]
+			"name": "Users",
+			"item": [
+				{
+					"name": "Deck",
+					"item": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/register",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"register"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "login",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "username",
-							"value": "AaronGanteng",
-							"type": "text"
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Mulyono",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mulyono@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mulyono123",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "player",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "password",
-							"value": "aaron123",
-							"type": "text"
+						"url": {
+							"raw": "http://localhost:3000/api/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"register"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "http://localhost:3000/api/login",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"api",
-						"login"
-					]
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "Mulyono",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mulyono@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "mulyono123",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "player",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "topup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjAsImlhdCI6MTc1MDMyODUyNSwiZXhwIjoxNzUwMzMwMzI1fQ.n3sFWhTdJmfjw8Iq7osN6mj4sSYQC0nwS43XD0brDa4",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "amount",
+									"value": "6000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/topup/68498a4884162c28eda52f69",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"topup",
+								"68498a4884162c28eda52f69"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }

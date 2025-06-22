@@ -29,4 +29,20 @@
   "name": "Agile",
   "description": "This unit has the flexibility to be placed on either the Close Combat or Ranged rows.",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685409a18bed6dbcfb53a93e"
+  },
+  "name": "Special",
+  "description": "Special Cards",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685409b18bed6dbcfb53a942"
+  },
+  "name": "Weather",
+  "description": "Weather Cards",
+  "__v": 0
 }]

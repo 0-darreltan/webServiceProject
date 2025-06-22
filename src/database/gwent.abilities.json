@@ -69,4 +69,52 @@
   "name": "Muster",
   "description": "Find any cards with the same name in your deck and play them instantly.",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a348bed6dbcfb53a947"
+  },
+  "name": "Mardroeme",
+  "description": "This appears as a non-unit Skellige card (place on any row), or as a character’s ability (affects only the row the character is played on). It triggers transformation of all Berserker Cards on the same row.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a508bed6dbcfb53a94b"
+  },
+  "name": "Weather: Biting Frost",
+  "description": "This appears as a non-unit Neutral card. It sets the strength of all Close Combat cards to 1 for both players.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a608bed6dbcfb53a94f"
+  },
+  "name": "Weather: Impenetrable Fog",
+  "description": "This appears as a non-unit Neutral card. It sets the strength of all Ranged cards to 1 for both players.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a7b8bed6dbcfb53a953"
+  },
+  "name": "Weather: Torrential Rain",
+  "description": "This appears as a non-unit Neutral card. It sets the strength of all Siege cards to 1 for both players.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a888bed6dbcfb53a957"
+  },
+  "name": "Weather: Skellige Storm",
+  "description": "This appears as a non-unit Skellige card. It sets the strength of all Ranged and Siege cards to 1 for both players.",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68540a938bed6dbcfb53a95b"
+  },
+  "name": "Weather: Clear Weather",
+  "description": "This appears as a non-unit Neutral card. It removes any current weather effects across the entire battlefield.",
+  "__v": 0
 }]

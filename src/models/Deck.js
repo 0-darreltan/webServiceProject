@@ -11,12 +11,14 @@ const deckSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "User",
-      required: [true, "Pengguna tidak boleh kosong"],
+      required: [true, "Pengguna tidak bsoleh kosong"],
     },
-    card: {
-      type: mongoose.Schema.Types.ObjectId,
-      ref: "Card",
-    },
+    cards: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Card",
+      },
+    ],
     leader: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "Leader",

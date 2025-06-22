@@ -36,11 +36,9 @@ const {
 const verifyApiKey = require("../middlewares/verifyApiKey");
 const cekAdmin = require("../middlewares/cekAdmin");
 
-let id = 5;
-
 const storageSingle = multer.diskStorage({
   destination: (req, file, callback) => {
-    const folderName = `uploads/cards`;
+    const folderName = `uploads/cards/${req.body.faction}`;
     if (!fs.existsSync(folderName)) {
       fs.mkdirSync(folderName, { recursive: true });
     }
@@ -49,8 +47,7 @@ const storageSingle = multer.diskStorage({
   filename: (req, file, callback) => {
     // const fileExtension = path.extname(file.originalname).toLowerCase();
 
-    callback(null, `card${id}.png`);
-    id++;
+    callback(null, `${req.body.name}.png`);
   },
 });
 
@@ -88,11 +85,11 @@ router.put("/faction/:_id", [verifyApiKey, cekAdmin], updateFaction);
 router.delete("/faction/:_id", [verifyApiKey, cekAdmin], deleteFaction);
 
 //Leader Routes
-router.get("/card/leader/", getAllLeader);
-router.get("/card/leader/:_id", getSingleLeader);
-router.post("/card/leader", [verifyApiKey, cekAdmin], tambahLeader);
-router.put("/card/leader/:_id", [verifyApiKey, cekAdmin], updateLeader);
-router.delete("/card/leader/:_id", [verifyApiKey, cekAdmin], deleteLeader);
+router.get("/leader/", getAllLeader);
+router.get("/leader/:_id", getSingleLeader);
+router.post("/leader", [verifyApiKey, cekAdmin], tambahLeader);
+router.put("/leader/:_id", [verifyApiKey, cekAdmin], updateLeader);
+router.delete("/leader/:_id", [verifyApiKey, cekAdmin], deleteLeader);
 
 //Type Card Routes
 router.get("/type/", getAllTypeCard);

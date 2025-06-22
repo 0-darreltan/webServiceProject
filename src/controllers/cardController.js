@@ -139,6 +139,7 @@ const tambahCard = async (req, res) => {
       typeCard: cekType._id,
       ability: abilities,
       power: powers,
+      image: `/uploads/cards/${faction}/${name}.png`,
     });
 
     return res
