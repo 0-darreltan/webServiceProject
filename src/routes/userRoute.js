@@ -21,6 +21,8 @@ const {
   deleteProfile,
   beliCoin,
   beliPowerUp,
+  detailTrans,
+  headerTrans,
 } = require("../controllers/UserController");
 
 const verifyApiKey = require("../middlewares/verifyApiKey");
@@ -50,5 +52,7 @@ router.get(
   [verifyApiKey, cekAdmin],
   getHistoryPlayAsAdmin
 );
+router.get("/dtrans/admin/", [verifyApiKey, cekAdmin], detailTrans);
+router.get("/htrans/admin/", [verifyApiKey, cekAdmin], headerTrans);
 
 module.exports = router;
