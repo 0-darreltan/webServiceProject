@@ -1121,20 +1121,27 @@ const detailTrans = async (req, res) => {
       })
       .sort({ _id: -1 });
 
-    const result = data.map((item) => ({
-      _id: item._id,
-      data_user: {
-        _id: item.Htrans?._id,
-        user: item.Htrans?.user,
-      },
-      powerUp: {
-        _id: item.powerUp?._id,
-        name: item.powerUp?.name,
-        description: item.powerUp?.description,
-        harga_satuan: item.powerUp?.harga,
-      },
-      quantity: item.qty,
-    }));
+    const result = data.map((item) => {
+      const harga = item.powerUp?.harga || 0;
+      const qty = item.qty || 0;
+      const total = harga * qty;
+
+      return {
+        _id: item._id,
+        data_user: {
+          _id: item.Htrans?._id,
+          user: item.Htrans?.user,
+        },
+        powerUp: {
+          _id: item.powerUp?._id,
+          name: item.powerUp?.name,
+          description: item.powerUp?.description,
+          harga_satuan: harga,
+        },
+        quantity: qty,
+        total: total,
+      };
+    });
 
     res.status(200).json(result);
   } catch (error) {
@@ -1147,26 +1154,54 @@ const detailTrans = async (req, res) => {
 
 const headerTrans = async (req, res) => {
   try {
-    const data = await Htrans.find()
+    const data = await Dtrans.find()
       .populate({
-        path: "user",
-        select: "_id username",
+        path: "Htrans",
+        select: "_id user createdAt",
+        populate: {
+          path: "user",
+          select: "_id username",
+        },
       })
-      .sort({ createdAt: -1 });
+      .populate({
+        path: "powerUp",
+        select: "_id name description harga",
+      })
+      .sort({ _id: -1 });
 
-    const result = data.map((item) => {
-      const isoDate = new Date(item.createdAt).toISOString(); 
-      const [tanggal, waktu] = isoDate.split("T");
+    const grouped = {};
 
-      return {
-        _id: item._id,
-        user: item.user,
-        totalHarga: item.totalHarga,
-        tanggal: tanggal,
-        waktu: waktu, 
-      };
+    data.forEach((item) => {
+      const htrans = item.Htrans;
+      
+      if (!htrans || !htrans.user) return;
+
+      const userId = htrans.user._id.toString();
+      const username = htrans.user.username;
+      
+      const tanggal = new Date(htrans.createdAt).toISOString().split("T")[0];
+
+      const key = `${userId}_${tanggal}`;
+
+      if (!grouped[key]) {
+        grouped[key] = {
+          _id: `user${userId}`, 
+          user: {
+            _id: userId,
+            username: username,
+          },
+          tanggal: tanggal,
+          totalHarga: 0,
+        };
+      }
+
+      const harga = item.powerUp?.harga || 0;
+      const qty = item.qty || 0;
+      grouped[key].totalHarga += harga * qty;
     });
 
+    const result = Object.values(grouped);
+    
     res.status(200).json(result);
   } catch (error) {
     res.status(500).json({
