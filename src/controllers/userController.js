@@ -1,5 +1,5 @@
 const bcrypt = require("bcrypt");
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
 const {
   User,
@@ -8,6 +8,9 @@ const {
   Leader,
   HistoryTopup,
   HistoryPlay,
+  PowerUp,
+  Htrans,
+  Dtrans,
 } = require("../models");
 const {
   registerValidation,
@@ -501,15 +504,15 @@ const deleteDecks = async (req, res) => {
   }
 };
 
-const topup = async (req, res) => {
+const beliCoin = async (req, res) => {
   const { amount } = req.body;
 
   try {
     const yangLogin = req.user;
 
-    if (amount < 5000) {
+    if (Number(amount) <= 0) {
       return res.status(400).json({
-        message: "Topup minimal Rp 5000 untuk mendapatkan 1 saldo!",
+        message: "Minimal beli 1 coin",
       });
     }
 
@@ -519,19 +522,90 @@ const topup = async (req, res) => {
       return res.status(404).json({ message: "User tidak ditemukan!" });
     }
 
-    let total = Math.floor(Number(amount) / 5000);
+    if (cekUser.saldo < Number(amount) * 5000) {
+      return res.status(400).json({
+        message: `Saldo tidak cukup untuk membeli ${amount} coin!`,
+      });
+    }
 
-    cekUser.saldo += total;
+    let total = Number(amount) * 5000;
+
+    cekUser.saldo -= total;
+    cekUser.coin += Number(amount);
 
     await cekUser.save();
 
-    const history = HistoryTopup.create({
+    return res.status(200).json({
+      message: `Pembelian berhasil! Coin ${cekUser.username} sekarang Rp ${cekUser.coin}`,
+    });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
+
+const beliPowerUp = async (req, res) => {
+  const { name, amount } = req.body;
+
+  try {
+    const yangLogin = req.user;
+
+    const cekPowerUp = await PowerUp.findOne({ name: name });
+
+    if (!cekPowerUp) {
+      return res.status(404).json({ message: "Power Up tidak ditemukan!" });
+    }
+
+    if (Number(amount) < 1) {
+      return res.status(400).json({
+        message: "Minimal beli 1 power up",
+      });
+    }
+
+    const cekUser = await User.findById(yangLogin._id);
+
+    if (!cekUser) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    let total = Number(amount) * cekPowerUp.harga;
+
+    if (cekUser.saldo < total) {
+      return res.status(400).json({
+        message: `Saldo tidak cukup untuk membeli ${amount} power up!`,
+      });
+    }
+
+    cekUser.saldo -= total;
+
+    const inventoryItem = cekUser.inventory.find(
+      (item) => item.powerUp.toString() === cekPowerUp._id.toString()
+    );
+
+    if (inventoryItem) {
+      inventoryItem.quantity += Number(amount);
+    } else {
+      cekUser.inventory.push({
+        powerUp: cekPowerUp._id,
+        quantity: Number(amount),
+      });
+    }
+
+    await cekUser.save();
+
+    const htrans = await Htrans.create({
       user: cekUser._id,
-      amount: total,
+      totalHarga: total,
+    });
+
+    await Dtrans.create({
+      Htrans: htrans._id,
+      powerUp: cekPowerUp._id,
+      qty: amount,
+      harga: total,
     });
 
     return res.status(200).json({
-      message: `Topup berhasil! Saldo ${cekUser.username} sekarang Rp ${cekUser.saldo}`,
+      message: `Pembelian power up ${cekPowerUp.name} berhasil! Sisa saldo ${cekUser.username} sekarang Rp ${cekUser.saldo}`,
     });
   } catch (error) {
     return res.status(400).json({ message: error.message });
@@ -563,6 +637,43 @@ const getHistoryTopup = async (req, res) => {
       message: "Berhasil mengambil history topup!",
       total: history.length,
       history: historyList,
+    });
+  } catch (error) {
+    return res.status(400).json({ message: error.message });
+  }
+};
+
+const topup = async (req, res) => {
+  const { amount } = req.body;
+
+  try {
+    const yangLogin = req.user;
+
+    if (amount < 5000) {
+      return res.status(400).json({
+        message: "Topup minimal Rp 5000",
+      });
+    }
+
+    const cekUser = await User.findById(yangLogin._id);
+
+    if (!cekUser) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    // let total = Math.floor(Number(amount) / 5000);
+
+    cekUser.saldo += Number(amount);
+
+    await cekUser.save();
+
+    const history = HistoryTopup.create({
+      user: cekUser._id,
+      amount: amount,
+    });
+
+    return res.status(200).json({
+      message: `Topup berhasil! Saldo ${cekUser.username} sekarang Rp ${cekUser.saldo}`,
     });
   } catch (error) {
     return res.status(400).json({ message: error.message });
@@ -602,65 +713,68 @@ const playGame = async (req, res) => {
   try {
     const { deck_player1, player2, deck_player2 } = req.body;
 
-    const player1 = req.user; 
-    
-    if (player1.saldo < 1) {
-      return res.status(400).json({ 
+    const player1 = req.user;
+
+    if (player1.coin < 1) {
+      return res.status(400).json({
         message: "Saldo anda tidak mencukupi",
-        saldoAnda: player1.saldo
+        saldoAnda: player1.saldo,
       });
     }
 
     const cekPlayer2 = await User.findOne({ username: player2 });
     if (!cekPlayer2) {
-      return res.status(404).json({ message: "Player 2 tidak ditemukan!"});
+      return res.status(404).json({ message: "Player 2 tidak ditemukan!" });
     }
 
-    if (cekPlayer2.saldo < 1) {
-      return res.status(400).json({ 
+    if (cekPlayer2.coin < 1) {
+      return res.status(400).json({
         message: `${player2} tidak memiliki saldo yang mencukupi untuk bermain!`,
       });
     }
 
     let cekDeckP1, cekDeckP2;
 
-    if (typeof Deck.findOne === 'function' && Deck.associations) {
+    if (typeof Deck.findOne === "function" && Deck.associations) {
       cekDeckP1 = await Deck.findOne({
-        where: { 
+        where: {
           name: deck_player1,
         },
-        include: [{
-          association: 'cards', 
-          required: false
-        }]
+        include: [
+          {
+            association: "cards",
+            required: false,
+          },
+        ],
       });
 
       cekDeckP2 = await Deck.findOne({
-        where: { 
+        where: {
           name: deck_player2,
         },
-        include: [{
-          association: 'cards',
-          required: false
-        }]
+        include: [
+          {
+            association: "cards",
+            required: false,
+          },
+        ],
       });
-    }
-     else {
-      cekDeckP1 = await Deck.findOne({ name: deck_player1 }).populate('cards');
-      cekDeckP2 = await Deck.findOne({ name: deck_player2 }).populate('cards');
+    } else {
+      cekDeckP1 = await Deck.findOne({ name: deck_player1 }).populate("cards");
+      cekDeckP2 = await Deck.findOne({ name: deck_player2 }).populate("cards");
     }
 
     if (!cekDeckP1) {
-      return res.status(404).json({ 
+      return res.status(404).json({
         message: "Deck Player 1 tidak ditemukan!",
-        deckName: deck_player1
+        deckName: deck_player1,
       });
     }
 
     if (!cekDeckP2) {
       return res.status(404).json({
         message: "Deck Player 2 tidak ditemukan!",
-        deckName: deck_player2
+        deckName: deck_player2,
       });
     }
 
@@ -680,7 +794,7 @@ const playGame = async (req, res) => {
 
     let result = "";
     let winner = null;
-    
+
     if (totalPowerP1 > totalPowerP2) {
       result = "Player 1 Menang!";
       winner = "player1";
@@ -692,175 +806,120 @@ const playGame = async (req, res) => {
       winner = "draw";
     }
 
+    player1.coin -= 1;
+    cekPlayer2.coin -= 1;
+    player1.totalPlay += 1;
+    cekPlayer2.totalPlay += 1;
+
     if (winner === "player1") {
-      player1.saldo -= 1; 
-      cekPlayer2.saldo -= 1; 
-      player1.totalWins += 1; 
-    } 
-    else if (winner === "player2") {
-      player1.saldo -= 1; 
-      cekPlayer2.saldo -= 1; 
-      cekPlayer2.totalWins += 1;
-    } 
-    else {
-      player1.saldo -= 1;
-      cekPlayer2.saldo -= 1;
+      player1.totalWin += 1;
+    } else if (winner === "player2") {
+      cekPlayer2.totalWin += 1;
     }
- 
+
+    player1.winrate =
+      player1.totalPlay > 0 ? (player1.totalWin / player1.totalPlay) * 100 : 0;
+    cekPlayer2.winrate =
+      player2.totalPlay > 0
+        ? (cekPlayer2.totalWin / cekPlayer2.totalPlay) * 100
+        : 0;
+
     await player1.save();
     await cekPlayer2.save();
 
     await HistoryPlay.create({
       player1: player1._id,
+      totalPower1: totalPowerP1,
       player2: cekPlayer2._id,
-      totalPower1: totalPowerP1, 
-      totalPower2: totalPowerP2, 
-      winner: winner === "draw" ? null : winner === "player1" ? player1._id : cekPlayer2._id,
+      totalPower2: totalPowerP2,
+      winner:
+        winner === "draw"
+          ? "draw"
+          : winner === "player1"
+          ? player1._id
+          : cekPlayer2._id,
     });
 
     return res.status(200).json({
-      message: "Pertandingan selesai!",
-      player1: {
-        username: player1.username,
-        deck: cekDeckP1.name,
-        totalPower: totalPowerP1,
-        sisa_saldo: player1.saldo,
-        total_wins: player1.totalWins || 0
-      },
-      player2: {
-        username: cekPlayer2.username,
-        deck: cekDeckP2.name,
-        totalPower: totalPowerP2,
-        sisa_saldo: cekPlayer2.saldo,
-        total_wins: cekPlayer2.totalWins || 0
-      },
+      message: `Pertandingan selesai! Player 1 dengan power ${totalPowerP1} vs Player 2 dengan power ${totalPowerP2}`,
       hasilPertandingan: result,
     });
-
   } catch (error) {
-    console.error('Error dalam playGame:', error);
-    return res.status(500).json({ 
+    console.error("Error dalam playGame:", error);
+    return res.status(500).json({
       message: "Terjadi kesalahan internal server",
-      error: error.message 
+      error: error.message,
     });
   }
 };
 
 const getHistoryPlayAsPlayer = async (req, res) => {
   try {
-    const yangLagiLogin = req.user;
+    const yangLogin = req.user;
 
-    let historyMain;
-
-    if (typeof HistoryPlay.findAll === 'function') {
-      const { Op } = require('sequelize');
-      historyMain = await HistoryPlay.findAll({
-        where: {
-          [Op.or]: [
-            { player1: yangLagiLogin._id },
-            { player2: yangLagiLogin._id }
-          ]
-        },
-        include: [
-          {
-            model: User,
-            as: 'Player1',
-            attributes: ['username', '_id']
-          },
-          {
-            model: User,
-            as: 'Player2',
-            attributes: ['username', '_id']
-          }
-        ],
-        order: [['createdAt', 'DESC']]
-      });
-    } else {
-      historyMain = await HistoryPlay.find({
-        $or: [
-          { player1: yangLagiLogin._id },
-          { player2: yangLagiLogin._id }
-        ]
-      })
-        .populate('player1', 'username _id')
-        .populate('player2', 'username _id')
-        .sort({ createdAt: -1 });
-    }
+    let historyMain = await HistoryPlay.find({
+      $or: [{ player1: yangLogin._id }, { player2: yangLogin._id }],
+    })
+      .populate("player1", "username _id")
+      .populate("player2", "username _id")
+      .sort({ createdAt: -1 });
 
     if (!historyMain || historyMain.length === 0) {
       return res.status(200).json({
         message: "Belum ada riwayat permainan!",
-        data: []
+        data: [],
       });
     }
 
     const historynya = historyMain.map((gameRecord) => {
-      const isPlayer1 = gameRecord.player1._id.toString() === yangLagiLogin._id.toString();
-      const isPlayer2 = gameRecord.player2._id.toString() === yangLagiLogin._id.toString();
+      const isPlayer1 =
+        gameRecord.player1._id.toString() === yangLogin._id.toString();
+      const isPlayer2 =
+        gameRecord.player2._id.toString() === yangLogin._id.toString();
 
-      let namaMusuh = isPlayer1 ? gameRecord.player2.username : gameRecord.player1.username;
+      let namaMusuh = isPlayer1
+        ? gameRecord.player2.username
+        : gameRecord.player1.username;
 
-      let hasilPertandingan = 'Seri';
+      let hasilPertandingan = "Seri";
       if (gameRecord.winner === null) {
-        hasilPertandingan = 'Seri';
-      } else if (gameRecord.winner.toString() === yangLagiLogin._id.toString()) {
-        hasilPertandingan = 'Menang';
+        hasilPertandingan = "Seri";
+      } else if (gameRecord.winner.toString() === yangLogin._id.toString()) {
+        hasilPertandingan = "Menang";
       } else {
-        hasilPertandingan = 'Kalah';
+        hasilPertandingan = "Kalah";
       }
 
       return {
-        id: gameRecord._id,
-        nama_musuh: namaMusuh,
+        musuh: namaMusuh,
+        time: gameRecord.createdAt,
         hasilPertandingan: hasilPertandingan,
-        tanggal_main: gameRecord.createdAt,
-        total_power_anda: isPlayer1 ? gameRecord.totalPower1 : gameRecord.totalPower2,
-        total_power_musuh: isPlayer1 ? gameRecord.totalPower2 : gameRecord.totalPower1,
-        deck_anda: isPlayer1 ? gameRecord.deckPlayer1 : gameRecord.deckPlayer2,
-        deck_musuh: isPlayer1 ? gameRecord.deckPlayer2 : gameRecord.deckPlayer1
+        total_power_anda: isPlayer1
+          ? gameRecord.totalPower1
+          : gameRecord.totalPower2,
+        total_power_musuh: isPlayer1
+          ? gameRecord.totalPower2
+          : gameRecord.totalPower1,
       };
     });
 
-    // Statistiknya
-    const totalGames = historynya.length;
-    const menang = historynya.filter(g => g.hasilPertandingan === 'Menang').length;
-    const kalah = historynya.filter(g => g.hasilPertandingan === 'Kalah').length;
-    const seri = historynya.filter(g => g.hasilPertandingan === 'Seri').length;
-
     return res.status(200).json({
       message: "Riwayat permainan berhasil diambil!",
-      statistik: {
-        total_permainan: totalGames,
-        menang,
-        kalah,
-        seri,
-        win_rate: totalGames > 0 ? ((menang / totalGames) * 100).toFixed(2) + '%' : '0%'
-      },
-      data: historynya
+      history: historynya,
     });
-
   } catch (error) {
-    console.error('Error dalam getHistoryPlayAsPlayer:', error);
+    console.error("Error dalam getHistoryPlayAsPlayer:", error);
     return res.status(500).json({
       message: "Terjadi kesalahan internal server",
-      error: error.message
+      error: error.message,
     });
   }
 };
 
-
 const getHistoryPlayAsAdmin = async (req, res) => {
   try {
-    const yangLogin = req.user;
+    const { _id } = req.query;
 
-    // Cek role admin
-    if (yangLogin.role !== "admin") {
-      return res.status(403).json({ message: "Akses ditolak! Hanya admin yang bisa mengakses riwayat permainan." });
-    }
-
-    const { _id } = req.params;
-
-    // Cek apakah _id valid ObjectId
     const isValidId = mongoose.Types.ObjectId.isValid(_id);
 
     if (!_id || !isValidId) {
@@ -873,29 +932,30 @@ const getHistoryPlayAsAdmin = async (req, res) => {
       return res.status(200).json({
         message: "Berhasil mengambil semua riwayat permainan!",
         total: semuaHistory.length,
-        data: semuaHistory.map(h => ({
+        data: semuaHistory.map((h) => ({
           id: h._id,
           player1: h.player1.username,
           player2: h.player2.username,
           totalPower1: h.totalPower1,
           totalPower2: h.totalPower2,
           winner: h.winner
-            ? (h.winner.toString() === h.player1._id.toString()
+            ? h.winner.toString() === h.player1._id.toString()
               ? h.player1.username
-              : h.player2.username)
+              : h.player2.username
             : "Seri",
-          createdAt: h.createdAt
-        }))
+          createdAt: h.createdAt,
+        })),
       });
     }
 
-    // Jika _id valid → cari berdasarkan ID
     const history = await HistoryPlay.findById(_id)
       .populate("player1", "username")
       .populate("player2", "username");
 
     if (!history) {
-      return res.status(404).json({ message: "Riwayat permainan tidak ditemukan!" });
+      return res
+        .status(404)
+        .json({ message: "Riwayat permainan tidak ditemukan!" });
     }
 
     return res.status(200).json({
@@ -907,20 +967,146 @@ const getHistoryPlayAsAdmin = async (req, res) => {
         totalPower1: history.totalPower1,
         totalPower2: history.totalPower2,
         winner: history.winner
-          ? (history.winner.toString() === history.player1._id.toString()
+          ? history.winner.toString() === history.player1._id.toString()
             ? history.player1.username
-            : history.player2.username)
+            : history.player2.username
           : "Seri",
         createdAt: history.createdAt,
       },
     });
-
   } catch (error) {
     console.error("Error dalam getHistoryPlayAsAdmin:", error);
     return res.status(500).json({ message: error.message });
   }
 };
 
+const getUser = async (req, res) => {
+  const { username } = req.query;
+
+  try {
+    const search = {};
+
+    if (username) {
+      search.username = new RegExp(username, "i");
+    }
+
+    const result = await User.find(search);
+
+    if (!result || result.length === 0) {
+      return res.status(400).json({ message: "Tidak ada akun" });
+    }
+
+    return res.status(200).json({
+      message: "Berhasil mengambil data user!",
+      users: result.map((user) => ({
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        saldo: user.saldo,
+        coin: user.coin,
+        totalPlay: user.totalPlay,
+        totalWin: user.totalWin,
+        winrate: user.winrate + "%",
+        createdAt: user.createdAt,
+      })),
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getProfile = async (req, res) => {
+  try {
+    const yangLogin = req.user;
+
+    const user = await User.findById(yangLogin._id);
+    if (!user) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    return res.status(200).json({
+      profile: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        saldo: user.saldo,
+        coin: user.coin,
+        totalPlay: user.totalPlay,
+        totalWin: user.totalWin,
+        winrate: user.winrate + "%",
+        createdAt: user.createdAt,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const updateProfile = async (req, res) => {
+  const { username, email, password } = req.body;
+
+  try {
+    const yangLogin = req.user;
+
+    const user = await User.findById(yangLogin._id);
+    if (!user) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    if (username) {
+      user.username = username;
+    }
+
+    if (email) {
+      user.email = email;
+    }
+
+    if (password) {
+      user.password = await bcrypt.hash(password, 10);
+    }
+
+    await user.save();
+
+    return res.status(200).json({
+      message: "Profil berhasil diperbarui!",
+      profile: {
+        id: user._id,
+        username: user.username,
+        email: user.email,
+        role: user.role,
+        saldo: user.saldo,
+        coin: user.coin,
+        totalPlay: user.totalPlay,
+        totalWin: user.totalWin,
+        winrate: user.winrate + "%",
+        createdAt: user.createdAt,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const deleteProfile = async (req, res) => {
+  try {
+    const yangLogin = req.user;
+
+    const user = await User.findById(yangLogin._id);
+    if (!user) {
+      return res.status(404).json({ message: "User tidak ditemukan!" });
+    }
+
+    await User.delete({ _id: yangLogin._id });
+
+    return res.status(200).json({
+      message: "Profil berhasil dihapus!",
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
 
 module.exports = {
   register,
@@ -931,9 +1117,15 @@ module.exports = {
   updateDecks,
   deleteDecks,
   topup,
+  beliCoin,
+  beliPowerUp,
   getHistoryTopup,
   getDetailHtopup,
   playGame,
   getHistoryPlayAsPlayer,
   getHistoryPlayAsAdmin,
+  getUser,
+  getProfile,
+  updateProfile,
+  deleteProfile,
 };

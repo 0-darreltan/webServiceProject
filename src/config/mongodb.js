@@ -24,6 +24,7 @@ async function connectDB() {
       "historyplays",
       "historytopups",
       "leaders",
+      "powerups",
       "typecards",
       "users",
     ];

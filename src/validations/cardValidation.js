@@ -90,10 +90,28 @@ const leaderValidation = Joi.object({
   }),
 });
 
+const powerUpValidation = Joi.object({
+  name: Joi.string().min(3).max(50).required().messages({
+    "string.base": `Nama power up harus string`,
+    "string.min": `Nama power up minimal 3 karakter`,
+    "string.max": `Nama power up maksimal 50 karakter`,
+    "any.required": `Nama power up tidak boleh kosong`,
+  }),
+  description: Joi.string().required().messages({
+    "string.base": `Deskirpsi harus string`,
+    "any.required": `Deskirpsi tidak boleh kosong`,
+  }),
+  harga: Joi.number().min(5000).required().messages({
+    "any.required": `Harga tidak boleh kosong`,
+    "number.min": `Harga minimal 5000`,
+  }),
+});
+
 module.exports = {
   cardValidation,
   factionValidation,
   typeValidation,
   abilityValidation,
   leaderValidation,
+  powerUpValidation,
 };

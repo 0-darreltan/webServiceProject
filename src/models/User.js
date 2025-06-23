@@ -26,14 +26,32 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    totalWins: {
+    coin: {
       type: Number,
       default: 0,
     },
-    deck: [
+    totalPlay: {
+      type: Number,
+      default: 0,
+    },
+    totalWin: {
+      type: Number,
+      default: 0,
+    },
+    winrate: {
+      type: Number,
+      default: 0,
+    },
+    inventory: [
       {
-        type: mongoose.Schema.Types.ObjectId,
-        ref: "Deck",
+        powerUp: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "PowerUp",
+        },
+        quantity: {
+          type: Number,
+          default: 1,
+        },
       },
     ],
   },

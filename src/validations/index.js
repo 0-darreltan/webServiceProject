@@ -4,6 +4,7 @@ const {
   typeValidation,
   abilityValidation,
   leaderValidation,
+  powerUpValidation,
 } = require("./cardValidation");
 
 const {
@@ -21,4 +22,5 @@ module.exports = {
   abilityValidation,
   leaderValidation,
   deckValidation,
+  powerUpValidation,
 };

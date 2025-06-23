@@ -8,4 +8,7 @@ module.exports = {
   Leader: require("./Leader"),
   TypeCard: require("./TypeCard"),
   User: require("./User"),
+  Dtrans: require("./Dtrans"),
+  PowerUp: require("./PowerUp"),
+  Htrans: require("./Htrans"),
 };

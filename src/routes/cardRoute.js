@@ -31,7 +31,12 @@ const {
   tambahTypeCard,
   updateTypeCard,
   deleteTypeCard,
-} = require("../controllers/CardController");
+  getAllPowerUp,
+  getSinglePowerUp,
+  tambahPowerUp,
+  updatePowerUp,
+  deletePowerUp,
+} = require("../controllers/cardController");
 
 const verifyApiKey = require("../middlewares/verifyApiKey");
 const cekAdmin = require("../middlewares/cekAdmin");
@@ -97,6 +102,12 @@ router.get("/type/:_id", getSingleTypeCard);
 router.post("/type", [verifyApiKey, cekAdmin], tambahTypeCard);
 router.put("/type/:_id", [verifyApiKey, cekAdmin], updateTypeCard);
 router.delete("/type/:_id", [verifyApiKey, cekAdmin], deleteTypeCard);
+
+router.get("/powerup/", getAllPowerUp);
+router.get("/powerup/:_id", getSinglePowerUp);
+router.post("/powerup", [verifyApiKey, cekAdmin], tambahPowerUp);
+router.put("/powerup/:_id", [verifyApiKey, cekAdmin], updatePowerUp);
+router.delete("/powerup/:_id", [verifyApiKey, cekAdmin], deletePowerUp);
 
 //Card Routes
 router.get("/api", getCardApi);

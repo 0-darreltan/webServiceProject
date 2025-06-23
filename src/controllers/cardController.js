@@ -1,11 +1,19 @@
 const axios = require("axios");
-const { Card, Faction, TypeCard, Ability, Leader } = require("../models");
+const {
+  Card,
+  Faction,
+  TypeCard,
+  Ability,
+  Leader,
+  PowerUp,
+} = require("../models");
 const {
   cardValidation,
   abilityValidation,
   factionValidation,
   leaderValidation,
   typeValidation,
+  powerUpValidation,
 } = require("../validations");
 
 const getCardApi = async (req, res) => {
@@ -729,6 +737,128 @@ const deleteTypeCard = async (req, res) => {
   }
 };
 
+const getAllPowerUp = async (req, res) => {
+  const { name } = req.query;
+  try {
+    let search = {};
+
+    if (name) {
+      search.name = new RegExp(name, "i");
+    }
+
+    const powerUps = await PowerUp.find(search);
+
+    return res.status(200).json(powerUps);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getSinglePowerUp = async (req, res) => {
+  const { _id } = req.params;
+
+  try {
+    const powerUp = await PowerUp.findById(_id);
+    if (!powerUp) {
+      return res.status(404).json({ message: "Power Up tidak ditemukan!" });
+    }
+    return res.status(200).json(powerUp);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const tambahPowerUp = async (req, res) => {
+  const { name, description, harga } = req.body;
+
+  try {
+    await powerUpValidation.validateAsync(req.body, { abortEarly: false });
+  } catch (validationError) {
+    const errorMessages = validationError.details
+      .map((detail) => detail.message)
+      .join(", ");
+    return res.status(400).json({ message: errorMessages });
+  }
+
+  try {
+    const cekPowerUp = await PowerUp.findOne({ name });
+
+    if (cekPowerUp) {
+      return res.status(400).json({ message: "Power Up sudah ada!" });
+    }
+
+    const result = await PowerUp.create({
+      name,
+      description,
+      harga,
+    });
+
+    return res.status(201).json({
+      message: "Power Up berhasil ditambahkan!",
+      powerUp: {
+        id: result._id,
+        name: result.name,
+        description: result.description,
+        harga: result.harga,
+      },
+    });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const updatePowerUp = async (req, res) => {
+  const { _id } = req.params;
+  const { name, description, harga } = req.body;
+
+  try {
+    await powerUpValidation.validateAsync(req.body, { abortEarly: false });
+  } catch (validationError) {
+    const errorMessages = validationError.details
+      .map((detail) => detail.message)
+      .join(", ");
+    return res.status(400).json({ message: errorMessages });
+  }
+
+  try {
+    const cekPowerUp = await PowerUp.findById(_id);
+
+    if (!cekPowerUp) {
+      return res.status(404).json({ message: "Power Up tidak ditemukan!" });
+    }
+
+    cekPowerUp.name = name;
+    cekPowerUp.description = description;
+    cekPowerUp.harga = harga;
+
+    await cekPowerUp.save();
+
+    return res
+      .status(200)
+      .json({ message: `Power Up ${cekPowerUp.name} berhasil diperbarui!` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const deletePowerUp = async (req, res) => {
+  const { _id } = req.params;
+
+  try {
+    const cekPowerUp = await PowerUp.findById(_id);
+    if (!cekPowerUp) {
+      return res.status(404).json({ message: "Power Up tidak ditemukan!" });
+    }
+
+    await PowerUp.deleteOne({ _id });
+    return res
+      .status(200)
+      .json({ message: `Power Up ${cekPowerUp.name} berhasil dihapus!` });
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
 module.exports = {
   getCardApi,
   getAllCard,
@@ -756,4 +886,9 @@ module.exports = {
   tambahTypeCard,
   updateTypeCard,
   deleteTypeCard,
+  getAllPowerUp,
+  getSinglePowerUp,
+  tambahPowerUp,
+  updatePowerUp,
+  deletePowerUp,
 };
