@@ -52,7 +52,7 @@ router.get(
   [verifyApiKey, cekAdmin],
   getHistoryPlayAsAdmin
 );
-router.get("/dtrans/admin/", [verifyApiKey, cekAdmin], detailTrans);
-router.get("/htrans/admin/", [verifyApiKey, cekAdmin], headerTrans);
+router.get("/dtrans/", [verifyApiKey, cekAdmin], detailTrans);
+router.get("/htrans/", [verifyApiKey, cekAdmin], headerTrans);
 
 module.exports = router;
