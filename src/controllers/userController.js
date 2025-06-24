@@ -1,6 +1,7 @@
 const bcrypt = require("bcrypt");
 const mongoose = require("mongoose");
 const jwt = require("jsonwebtoken");
+
 const {
   User,
   Deck,
@@ -1154,54 +1155,23 @@ const detailTrans = async (req, res) => {
 
 const headerTrans = async (req, res) => {
   try {
-    const data = await Dtrans.find()
-      .populate({
-        path: "Htrans",
-        select: "_id user createdAt",
-        populate: {
-          path: "user",
-          select: "_id username",
-        },
-      })
-      .populate({
-        path: "powerUp",
-        select: "_id name description harga",
-      })
-      .sort({ _id: -1 });
+    const data = await Htrans.find();
 
-    const grouped = {};
-
-    data.forEach((item) => {
-      const htrans = item.Htrans;
-      
-      if (!htrans || !htrans.user) return;
-
-      const userId = htrans.user._id.toString();
-      const username = htrans.user.username;
-      
-      const tanggal = new Date(htrans.createdAt).toISOString().split("T")[0];
-
-      const key = `${userId}_${tanggal}`;
-
-      if (!grouped[key]) {
-        grouped[key] = {
-          _id: `user${userId}`, 
-          user: {
-            _id: userId,
-            username: username,
-          },
-          tanggal: tanggal,
-          totalHarga: 0,
-        };
-      }
-
-      const harga = item.powerUp?.harga || 0;
-      const qty = item.qty || 0;
-      grouped[key].totalHarga += harga * qty;
+    const result = data.map((item) => {
+      // Format createdAt to DD-MM-YYYY
+      const date = new Date(item.createdAt);
+      const day = String(date.getDate()).padStart(2, "0");
+      const month = String(date.getMonth() + 1).padStart(2, "0");
+      const year = date.getFullYear();
+      const formattedDate = `${day}-${month}-${year}`;
+      return {
+        _id: item._id,
+        user: item.user,
+        totalHarga: item.totalHarga,
+        time: formattedDate,
+      };
     });
 
-    const result = Object.values(grouped);
-    
     res.status(200).json(result);
   } catch (error) {
     res.status(500).json({
@@ -1210,7 +1180,6 @@ const headerTrans = async (req, res) => {
     });
   }
 };
-
 
 module.exports = {
   register,
