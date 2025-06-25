@@ -19,31 +19,31 @@ async function connectDB() {
     await mongoose.connect(MONGO_URI, mongooseOptions);
     console.log("Successfully connected to MongoDB via mongodb.js!");
 
-    const db = mongoose.connection.db;
-    const collections = [
-      "abilities",
-      "cards",
-      "decks",
-      "factions",
-      "historyplays",
-      "historytopups",
-      "leaders",
-      "powerups",
-      "typecards",
-      "users",
-    ];
+    // const db = mongoose.connection.db;
+    // const collections = [
+    //   "abilities",
+    //   "cards",
+    //   "decks",
+    //   "factions",
+    //   "historyplays",
+    //   "historytopups",
+    //   "leaders",
+    //   "powerups",
+    //   "typecards",
+    //   "users",
+    // ];
 
-    const existingCollections = await db.listCollections().toArray();
-    const existingCollectionNames = existingCollections.map((col) => col.name);
+    // const existingCollections = await db.listCollections().toArray();
+    // const existingCollectionNames = existingCollections.map((col) => col.name);
 
-    for (const collection of collections) {
-      if (!existingCollectionNames.includes(collection)) {
-        await db.createCollection(collection);
-        console.log(`Collection '${collection}' dibuat.`);
-      } else {
-        console.log(`Collection '${collection}' sudah ada.`);
-      }
-    }
+    // for (const collection of collections) {
+    //   if (!existingCollectionNames.includes(collection)) {
+    //     await db.createCollection(collection);
+    //     console.log(`Collection '${collection}' dibuat.`);
+    //   } else {
+    //     console.log(`Collection '${collection}' sudah ada.`);
+    //   }
+    // }
 
     mongoose.connection.on("error", (err) => {
       console.error("MongoDB runtime connection error:", err);
