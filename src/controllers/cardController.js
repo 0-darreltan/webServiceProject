@@ -127,12 +127,7 @@ const getImageCard = async (req, res) => {
 
     const finalImageUrl = `${baseUrl}${imagePathFromDB}`;
 
-    res.status(200).json({
-      _id: card._id,
-      name: card.name,
-      imagePath: card.imagePath, // ini path asli dari DB
-      imageUrl: finalImageUrl, // ini URL lengkap yang bisa diakses browser
-    });
+    res.sendFile({ finalImageUrl }, { root: "." });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
