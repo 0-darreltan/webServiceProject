@@ -1,14 +1,13 @@
-// In this file you can configure migrate-mongo
-
 require("dotenv").config();
-
+// This file is used to configure migrate-mongo, a tool for managing MongoDB migrations.
+// In this file you can configure migrate-mongo
 const config = {
   mongodb: {
     // TODO Change (or review) the url to your MongoDB:
     url: process.env.MONGO_URI,
 
     // TODO Change this to your database name:
-    databaseName: "YOURDATABASENAME",
+    databaseName: "gwent",
 
     options: {
       useNewUrlParser: true, // removes a deprecation warning when connecting

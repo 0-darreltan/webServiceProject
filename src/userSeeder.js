@@ -26,7 +26,9 @@ function createRandomAccount() {
 
 const seedUsers = async (count = 10) => {
   try {
-    await mongoose.connect(process.env.MONGO_URI);
+    await mongoose.connect(
+      `mongodb+srv://${process.env.USERNAME}:${process.env.PASSWORD}@webserviceproject.feyinyz.mongodb.net/?retryWrites=true&w=majority&appName=${process.env.DATABASENAME}`
+    );
     console.log("MongoDB terhubung untuk seeding...");
 
     // await User.deleteMany({});

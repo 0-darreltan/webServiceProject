@@ -133,7 +133,7 @@
 					"response": []
 				},
 				{
-					"name": "getCard",
+					"name": "getAllCard",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -179,6 +179,27 @@
 								"api",
 								"card",
 								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/6853f1197f95d4c2a2c5388d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"6853f1197f95d4c2a2c5388d"
 							]
 						}
 					},
@@ -307,10 +328,32 @@
 					"response": []
 				},
 				{
-					"name": "getFaction",
+					"name": "getAllFaction",
 					"request": {
 						"method": "GET",
 						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleFaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/faction/684998ed185b94bdd00a58d8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"faction",
+								"684998ed185b94bdd00a58d8"
+							]
+						}
 					},
 					"response": []
 				}
@@ -448,10 +491,32 @@
 					"response": []
 				},
 				{
-					"name": "getTypeCard",
+					"name": "getAllTypeCard",
 					"request": {
 						"method": "GET",
 						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleTypeCard",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/type/684e9fb1eab515977ab4c38d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"type",
+								"684e9fb1eab515977ab4c38d"
+							]
+						}
 					},
 					"response": []
 				}
@@ -578,10 +643,32 @@
 					"response": []
 				},
 				{
-					"name": "getAbility",
+					"name": "getAllAbility",
 					"request": {
 						"method": "GET",
 						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleAbility",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/ability/68499bca8ceafc3c4ea107d9",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"ability",
+								"68499bca8ceafc3c4ea107d9"
+							]
+						}
 					},
 					"response": []
 				}
@@ -732,6 +819,49 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "getAllLeader",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/leader",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"leader"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getSingleLeader",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/card/leader/684ea27c3b046a594446a17f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"card",
+								"leader",
+								"684ea27c3b046a594446a17f"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
@@ -739,8 +869,632 @@
 			"name": "Users",
 			"item": [
 				{
+					"name": "PowerUp",
+					"item": [
+						{
+							"name": "getAllPowerUp",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzMzNjUsImV4cCI6MTc1MDc1OTc2NX0.-_tTAuC_o1aKQ2YcMHJLsrnUCV1MLG7jGTnzIfL8otk",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/card/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"card",
+										"powerup"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "plus",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSinglePowerUp",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:3000/api/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"powerup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "tambahPowerUp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzU3ODYsImV4cCI6MTc1MDc2MjE4Nn0.yLZrWS-_z9qrJLvdMxmhOdM7ZwxEUNw2ScwqjyZlDs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "harga",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"powerup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updatePowerUp",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzU3ODYsImV4cCI6MTc1MDc2MjE4Nn0.yLZrWS-_z9qrJLvdMxmhOdM7ZwxEUNw2ScwqjyZlDs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "harga",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"powerup"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deletePowerUp",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzU3ODYsImV4cCI6MTc1MDc2MjE4Nn0.yLZrWS-_z9qrJLvdMxmhOdM7ZwxEUNw2ScwqjyZlDs8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"powerup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
 					"name": "Deck",
-					"item": []
+					"item": [
+						{
+							"name": "tambahDeck",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjIsImlhdCI6MTc1MDU4NTk4MiwiZXhwIjoxNzUwNjcyMzgyfQ.xNNQysnI4wzVOCm8iLtc7eTU7siTmNpF3znoqPeo4es",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Gacor",
+											"type": "text"
+										},
+										{
+											"key": "leader",
+											"value": "Francesca Findabair: The Beautiful",
+											"type": "text"
+										},
+										{
+											"key": "cards",
+											"value": "Havekar Healer, Riordain, Elven Skirmisher, Toruviel, Dwarven Skirmisher, Ciaran aep Easnillien, Dol Blathanna Archer, Vrihedd Brigade Recruit, Mahakaman Defender, Vrihedd Brigade Veteran, Havekar Smuggler, Dol Blathanna Scout, Barclay Els, Yaevinn, Filavandrel aen Fidhail, Ida Emean aep Sivney, Dennis Cranmer, Commander’s Horn, Decoy, Eithné, Saesenthessis, Iorveth",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/decks/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"decks",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDeck",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjIsImlhdCI6MTc1MDU4NTk4MiwiZXhwIjoxNzUwNjcyMzgyfQ.xNNQysnI4wzVOCm8iLtc7eTU7siTmNpF3znoqPeo4es",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/decks/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"decks",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getSingleDeck",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjIsImlhdCI6MTc1MDU4NTk4MiwiZXhwIjoxNzUwNjcyMzgyfQ.xNNQysnI4wzVOCm8iLtc7eTU7siTmNpF3znoqPeo4es",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/decks/6857de4f67a12ec27153e25b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"decks",
+										"6857de4f67a12ec27153e25b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "updateDeck",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjIsImlhdCI6MTc1MDU4NTk4MiwiZXhwIjoxNzUwNjcyMzgyfQ.xNNQysnI4wzVOCm8iLtc7eTU7siTmNpF3znoqPeo4es",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Gacorrr",
+											"type": "text"
+										},
+										{
+											"key": "leader",
+											"value": "Francesca Findabair: Pureblood Elf",
+											"type": "text"
+										},
+										{
+											"key": "cards",
+											"value": "Havekar Healer, Riordain, Elven Skirmisher, Toruviel, Dwarven Skirmisher, Ciaran aep Easnillien, Dol Blathanna Archer, Vrihedd Brigade Recruit, Mahakaman Defender, Vrihedd Brigade Veteran, Havekar Smuggler, Dol Blathanna Scout, Barclay Els, Yaevinn, Filavandrel aen Fidhail, Ida Emean aep Sivney, Dennis Cranmer, Commander’s Horn, Decoy, Eithné, Saesenthessis, Iorveth",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/decks/6857de4f67a12ec27153e25b",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"decks",
+										"6857de4f67a12ec27153e25b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteDeck",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "History",
+					"item": [
+						{
+							"name": "getHistoryTopup",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGJmMDg0MTYyYzI4ZWRhNTJmNzIiLCJ1c2VybmFtZSI6IldpbnN0b25TZW1vayIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2MDQwNDAsImV4cCI6MTc1MDY5MDQ0MH0.WwLdiHqiIq8n7m1R4Nmug337VpR0aJ6L4BfPnOD9_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/topup/history",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"topup",
+										"history"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDetailHtopup",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGJmMDg0MTYyYzI4ZWRhNTJmNzIiLCJ1c2VybmFtZSI6IldpbnN0b25TZW1vayIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2MDQwNDAsImV4cCI6MTc1MDY5MDQ0MH0.WwLdiHqiIq8n7m1R4Nmug337VpR0aJ6L4BfPnOD9_K8",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/topup/history/detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"topup",
+										"history",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getHistoryPlay",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGJmMDg0MTYyYzI4ZWRhNTJmNzIiLCJ1c2VybmFtZSI6IldpbnN0b25TZW1vayIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzE3OTIsImV4cCI6MTc1MDc1ODE5Mn0.d5meBPwUULCG9AQAIFTEt6bOrVQOrt1ADTmdPv_bGqc",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/play/history",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"play",
+										"history"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDetailHplay",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzI2MDQsImV4cCI6MTc1MDc1OTAwNH0.9njGU4QOH_kIAfts04k1q1casp-PwRX95We5cWzAF6Q",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/play/history/detail",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"play",
+										"history",
+										"detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getDtrans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA3ODA0ODcsImV4cCI6MTc1MDg2Njg4N30.t9qVTc4pXidxb0sq-QZRD7BIsoHMcI0o0-5Tx4V40m0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/dtrans",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"dtrans"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getHtrans",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA3ODA0ODcsImV4cCI6MTc1MDg2Njg4N30.t9qVTc4pXidxb0sq-QZRD7BIsoHMcI0o0-5Tx4V40m0",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "http://localhost:3000/api/htrans",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"htrans"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Transaksi",
+					"item": [
+						{
+							"name": "topup",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjoyMiwiaWF0IjoxNzUwNjAzMjg5LCJleHAiOjE3NTA2ODk2ODl9.r4CSJX3KW5lrjjB4Ns6-UT4fJqAJA2wEs5oJDYCcCVo",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "amount",
+											"value": "50000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/topup/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"topup",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "beliCoin",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGJmMDg0MTYyYzI4ZWRhNTJmNzIiLCJ1c2VybmFtZSI6IldpbnN0b25TZW1vayIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzgzNDcsImV4cCI6MTc1MDc2NDc0N30.Ca5_dYBm4ecInCVmPU_d5n-A8CZ9Wfk9FnnPflUCZN8",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "amount",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/coin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"coin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "beliPowerUp",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "x-auth-token",
+										"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjo1MDAwMCwiaWF0IjoxNzUwNjc4OTI0LCJleHAiOjE3NTA3NjUzMjR9.5Yl6VqHF395ORZPFrrcFjev17VlXahta6VY2D_0-n-o",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "Skip Turn",
+											"type": "text"
+										},
+										{
+											"key": "amount",
+											"value": "2",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://localhost:3000/api/powerup",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"powerup"
+									]
+								}
+							},
+							"response": []
+						}
+					]
 				},
 				{
 					"name": "register",
@@ -833,13 +1587,13 @@
 					"response": []
 				},
 				{
-					"name": "topup",
+					"name": "play",
 					"request": {
 						"method": "POST",
 						"header": [
 							{
 								"key": "x-auth-token",
-								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGM0Njg0MTYyYzI4ZWRhNTJmNzgiLCJ1c2VybmFtZSI6Ik11bHlvbm8iLCJyb2xlIjoicGxheWVyIiwic2FsZG8iOjAsImlhdCI6MTc1MDMyODUyNSwiZXhwIjoxNzUwMzMwMzI1fQ.n3sFWhTdJmfjw8Iq7osN6mj4sSYQC0nwS43XD0brDa4",
+								"value": "",
 								"type": "text"
 							}
 						],
@@ -847,14 +1601,24 @@
 							"mode": "urlencoded",
 							"urlencoded": [
 								{
-									"key": "amount",
-									"value": "6000",
+									"key": "deck1",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "player2",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "deck2",
+									"value": "",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "http://localhost:3000/api/topup/68498a4884162c28eda52f69",
+							"raw": "http://localhost:3000/api/play",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -862,8 +1626,79 @@
 							"port": "3000",
 							"path": [
 								"api",
-								"topup",
-								"68498a4884162c28eda52f69"
+								"play"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUser",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "getProfile",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "updateProfile",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzMzNjUsImV4cCI6MTc1MDc1OTc2NX0.-_tTAuC_o1aKQ2YcMHJLsrnUCV1MLG7jGTnzIfL8otk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteProfile",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-auth-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODQ5OGE0ODg0MTYyYzI4ZWRhNTJmNjkiLCJ1c2VybmFtZSI6IkFhcm9uR2FudGVuZyIsInJvbGUiOiJhZG1pbiIsInNhbGRvIjowLCJpYXQiOjE3NTA2NzMzNjUsImV4cCI6MTc1MDc1OTc2NX0.-_tTAuC_o1aKQ2YcMHJLsrnUCV1MLG7jGTnzIfL8otk",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:3000/api/profile",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"profile"
 							]
 						}
 					},

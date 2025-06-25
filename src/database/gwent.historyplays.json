@@ -1,0 +1,450 @@
+[{
+  "_id": {
+    "$oid": "68584dd383687ffb5e100a66"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:15.662Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:15.662Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584ddc83687ffb5e100a70"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:24.669Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:24.669Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584dde83687ffb5e100a7a"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:26.257Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:26.257Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584de083687ffb5e100a84"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:28.033Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:28.033Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584de483687ffb5e100a8e"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:32.637Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:32.637Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584dee83687ffb5e100a98"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 101,
+  "winner": null,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:42.346Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:42.346Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584df183687ffb5e100aa2"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 101,
+  "winner": null,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:45.473Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:45.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584df783687ffb5e100aac"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:51.150Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:51.150Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68584df883687ffb5e100ab6"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:39:52.724Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:39:52.724Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858522122fd445ff1edf1f0"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:37.351Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:37.351Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858522222fd445ff1edf1fa"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:38.983Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:38.983Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858522a22fd445ff1edf204"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 100,
+  "winner": null,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:46.003Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:46.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858523322fd445ff1edf20e"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:55.042Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:55.042Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858523622fd445ff1edf218"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:58.181Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:58.181Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858523722fd445ff1edf222"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:57:59.896Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:57:59.896Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858523a22fd445ff1edf22c"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 101,
+  "totalPower2": 100,
+  "winner": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:58:02.282Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:58:02.282Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858524a22fd445ff1edf23b"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:58:18.608Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:58:18.608Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858524c22fd445ff1edf245"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:58:20.668Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:58:20.668Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6858524e22fd445ff1edf24f"
+  },
+  "player1": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "player2": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "totalPower1": 100,
+  "totalPower2": 101,
+  "winner": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T18:58:22.377Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T18:58:22.377Z"
+  },
+  "__v": 0
+}]

@@ -1,7 +1,10 @@
+require("dotenv").config();
+
 const mongoose = require("mongoose");
 
-const MONGO_URI =
-  "mongodb+srv://darreltan02:xSPBOpItO4CfeArx@webserviceproject.feyinyz.mongodb.net/?retryWrites=true&w=majority&appName=webServiceProject";
+const MONGO_URI = process.env.MONGO_URI;
+
+console.log("Using MongoDB URI:", MONGO_URI);
 
 // Opsi koneksi Mongoose (opsional, Mongoose modern memiliki default yang baik)
 const mongooseOptions = {
