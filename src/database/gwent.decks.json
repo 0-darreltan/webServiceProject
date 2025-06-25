@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "6857c288bafaa177da5bbb49"
+  },
+  "name": "Ambatukam",
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "leader": {
+    "$oid": "684ea3823b046a594446a1b2"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857c32586a7b33bdd0cadb2"
+  },
+  "name": "Empire",
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "leader": {
+    "$oid": "684ea3823b046a594446a1b2"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857c3f1f08db232b0203842"
+  },
+  "name": "givenelek",
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "card": [],
+  "leader": {
+    "$oid": "684ea3823b046a594446a1b2"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857c44d3c4ab6e9a14944d7"
+  },
+  "name": "ajdindajcn",
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "cards": [
+    {
+      "$oid": "6857759469fcbc6c8c3b27a5"
+    },
+    {
+      "$oid": "6856ec5e69fcbc6c8c3b2783"
+    },
+    {
+      "$oid": "6857768769fcbc6c8c3b27e5"
+    },
+    {
+      "$oid": "6857767569fcbc6c8c3b27df"
+    },
+    {
+      "$oid": "6857763f69fcbc6c8c3b27d1"
+    },
+    {
+      "$oid": "6857762e69fcbc6c8c3b27cb"
+    },
+    {
+      "$oid": "6856ecad69fcbc6c8c3b2791"
+    },
+    {
+      "$oid": "6857750769fcbc6c8c3b279e"
+    },
+    {
+      "$oid": "685775e469fcbc6c8c3b27be"
+    },
+    {
+      "$oid": "6856ec9069fcbc6c8c3b278a"
+    },
+    {
+      "$oid": "6857772669fcbc6c8c3b27f9"
+    },
+    {
+      "$oid": "6856e57869fcbc6c8c3b2765"
+    },
+    {
+      "$oid": "685775ff69fcbc6c8c3b27c4"
+    },
+    {
+      "$oid": "6856e56e69fcbc6c8c3b275e"
+    },
+    {
+      "$oid": "685774ee69fcbc6c8c3b2798"
+    },
+    {
+      "$oid": "6857769469fcbc6c8c3b27eb"
+    },
+    {
+      "$oid": "685775c969fcbc6c8c3b27b2"
+    },
+    {
+      "$oid": "685775d769fcbc6c8c3b27b8"
+    },
+    {
+      "$oid": "685775b669fcbc6c8c3b27ac"
+    },
+    {
+      "$oid": "6857765d69fcbc6c8c3b27d8"
+    },
+    {
+      "$oid": "6856ec4169fcbc6c8c3b277c"
+    },
+    {
+      "$oid": "6856e5c869fcbc6c8c3b2771"
+    }
+  ],
+  "leader": {
+    "$oid": "684ea3823b046a594446a1b2"
+  },
+  "__v": 0
+}]

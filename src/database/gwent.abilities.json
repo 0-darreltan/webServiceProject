@@ -117,4 +117,12 @@
   "name": "Weather: Clear Weather",
   "description": "This appears as a non-unit Neutral card. It removes any current weather effects across the entire battlefield.",
   "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ebed69fcbc6c8c3b2775"
+  },
+  "name": "Berserker",
+  "description": "This unit changes into a much stronger version of itself if a Mardroeme is played before or after it.",
+  "__v": 0
 }]

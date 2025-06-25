@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "6859328493877def6be41616"
+  },
+  "name": "Skip Turn",
+  "description": "Skip Enemy Turn",
+  "harga": 15000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685932b893877def6be4161a"
+  },
+  "name": "Plus 2",
+  "description": "Plus 2 card into your deck",
+  "harga": 5000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685932c393877def6be4161e"
+  },
+  "name": "Plus 4",
+  "description": "Plus 4 card into your deck",
+  "harga": 10000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685933d9304e0ea53b878a3e"
+  },
+  "name": "Check",
+  "description": "Check 3 random card from your enemy deck",
+  "harga": 20000,
+  "__v": 0
+}]

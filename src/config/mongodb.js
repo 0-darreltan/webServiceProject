@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URI =
+  "mongodb+srv://darreltan02:xSPBOpItO4CfeArx@webserviceproject.feyinyz.mongodb.net/?retryWrites=true&w=majority&appName=webServiceProject";
 
 // Opsi koneksi Mongoose (opsional, Mongoose modern memiliki default yang baik)
 const mongooseOptions = {

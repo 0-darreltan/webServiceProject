@@ -15,7 +15,8 @@
     }
   ],
   "power": 1,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Kaedweni Siege Expert"
 },
 {
   "_id": {
@@ -30,7 +31,8 @@
   },
   "ability": [],
   "power": 1,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Redanian Foot Soldier"
 },
 {
   "_id": {
@@ -49,7 +51,8 @@
     }
   ],
   "power": 1,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Poor Fucking Infantry"
 },
 {
   "_id": {
@@ -68,7 +71,8 @@
     }
   ],
   "power": 1,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Thaler"
 },
 {
   "_id": {
@@ -83,7 +87,8 @@
   },
   "ability": [],
   "power": 2,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Yarpen Zigrin"
 },
 {
   "_id": {
@@ -102,7 +107,8 @@
     }
   ],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Blue Stripes Commando"
 },
 {
   "_id": {
@@ -117,7 +123,8 @@
   },
   "ability": [],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Sheldon Skaggs"
 },
 {
   "_id": {
@@ -132,7 +139,8 @@
   },
   "ability": [],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Sabrina Glevissig"
 },
 {
   "_id": {
@@ -151,7 +159,8 @@
     }
   ],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Sigismund Dijkstra"
 },
 {
   "_id": {
@@ -170,7 +179,8 @@
     }
   ],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Dun Banner Medic"
 },
 {
   "_id": {
@@ -189,7 +199,8 @@
     }
   ],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Crinfrid Reavers Dragon Hunter"
 },
 {
   "_id": {
@@ -208,7 +219,8 @@
     }
   ],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Prince Stennis"
 },
 {
   "_id": {
@@ -223,7 +235,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Sile de Tansarville"
 },
 {
   "_id": {
@@ -238,7 +251,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Keira Metz"
 },
 {
   "_id": {
@@ -253,7 +267,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Siegfried od Denesle"
 },
 {
   "_id": {
@@ -268,7 +283,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Ves"
 },
 {
   "_id": {
@@ -283,7 +299,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Siege Tower"
 },
 {
   "_id": {
@@ -298,7 +315,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Ballista"
 },
 {
   "_id": {
@@ -313,7 +331,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Trebuchet"
 },
 {
   "_id": {
@@ -328,7 +347,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Dethmold"
 },
 {
   "_id": {
@@ -347,7 +367,8 @@
     }
   ],
   "power": 8,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Catapult"
 },
 {
   "_id": {
@@ -366,7 +387,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Philippa Eilhart"
 },
 {
   "_id": {
@@ -385,7 +407,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Esterad Thyssen"
 },
 {
   "_id": {
@@ -404,7 +427,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/John Natalis"
 },
 {
   "_id": {
@@ -423,7 +447,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Northern Realms/Vernon Roche"
 },
 {
   "_id": {
@@ -442,7 +467,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Havekar Healer"
 },
 {
   "_id": {
@@ -457,7 +483,8 @@
   },
   "ability": [],
   "power": 1,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Riordain"
 },
 {
   "_id": {
@@ -476,7 +503,8 @@
     }
   ],
   "power": 2,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Elven Skirmisher"
 },
 {
   "_id": {
@@ -491,7 +519,8 @@
   },
   "ability": [],
   "power": 2,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Toruviel"
 },
 {
   "_id": {
@@ -510,7 +539,8 @@
     }
   ],
   "power": 3,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Dwarven Skirmisher"
 },
 {
   "_id": {
@@ -525,7 +555,8 @@
   },
   "ability": [],
   "power": 3,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Ciaran aep Easnillien"
 },
 {
   "_id": {
@@ -540,7 +571,8 @@
   },
   "ability": [],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Dol Blathanna Archer"
 },
 {
   "_id": {
@@ -555,7 +587,8 @@
   },
   "ability": [],
   "power": 4,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Vrihedd Brigade Recruit"
 },
 {
   "_id": {
@@ -570,7 +603,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Mahakaman Defender"
 },
 {
   "_id": {
@@ -585,7 +619,8 @@
   },
   "ability": [],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Vrihedd Brigade Veteran"
 },
 {
   "_id": {
@@ -604,7 +639,8 @@
     }
   ],
   "power": 5,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Havekar Smuggler"
 },
 {
   "_id": {
@@ -619,7 +655,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Dol Blathanna Scout"
 },
 {
   "_id": {
@@ -634,7 +671,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Barclay Els"
 },
 {
   "_id": {
@@ -649,7 +687,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Yaevinn"
 },
 {
   "_id": {
@@ -664,7 +703,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Filavandrel aen Fidhail"
 },
 {
   "_id": {
@@ -679,7 +719,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Ida Emean aep Sivney"
 },
 {
   "_id": {
@@ -694,7 +735,8 @@
   },
   "ability": [],
   "power": 6,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Dennis Cranmer"
 },
 {
   "_id": {
@@ -713,7 +755,8 @@
     }
   ],
   "power": 8,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Schirru"
 },
 {
   "_id": {
@@ -732,7 +775,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Milva"
 },
 {
   "_id": {
@@ -751,7 +795,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Iorveth"
 },
 {
   "_id": {
@@ -773,7 +818,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Isengrim Faoiltiarna"
 },
 {
   "_id": {
@@ -792,7 +838,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Saesenthessis"
 },
 {
   "_id": {
@@ -811,7 +858,8 @@
     }
   ],
   "power": 10,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Scoia'tael/Eithne"
 },
 {
   "_id": {
@@ -830,7 +878,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Decoy"
 },
 {
   "_id": {
@@ -849,7 +898,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Commander's Horn"
 },
 {
   "_id": {
@@ -868,7 +918,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Scorch"
 },
 {
   "_id": {
@@ -887,7 +938,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Mardroeme"
 },
 {
   "_id": {
@@ -906,7 +958,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Skellige Storm"
 },
 {
   "_id": {
@@ -925,7 +978,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Clear Weather"
 },
 {
   "_id": {
@@ -944,7 +998,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Torrential Rain"
 },
 {
   "_id": {
@@ -963,7 +1018,8 @@
     }
   ],
   "power": 0,
-  "__v": 0
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Impenetrable Fog"
 },
 {
   "_id": {
@@ -982,5 +1038,1645 @@
     }
   ],
   "power": 0,
+  "__v": 0,
+  "image": "/uploads/cards/Neutral/Biting Frost"
+},
+{
+  "_id": {
+    "$oid": "6856bca335320120b7183c8b"
+  },
+  "name": "Impera Brigade Guard",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 3,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Impera Brigade Guard.png"
+},
+{
+  "_id": {
+    "$oid": "6856bddfd1f6e119f9eaa115"
+  },
+  "name": "Puttkammer",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 3,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Puttkammer.png"
+},
+{
+  "_id": {
+    "$oid": "6856be1c7a70e468892bb33f"
+  },
+  "name": "Rotten Mangonel",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 3,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Rotten Mangonel.png"
+},
+{
+  "_id": {
+    "$oid": "6856be4b7a70e468892bb346"
+  },
+  "name": "Stefan Skellen",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 9,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Stefan Skellen.png"
+},
+{
+  "_id": {
+    "$oid": "6856be737a70e468892bb34c"
+  },
+  "name": "Heavy Zerrikanian Fire Scorpion",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 10,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Heavy Zerrikanian Fire Scorpion.png"
+},
+{
+  "_id": {
+    "$oid": "6856be917a70e468892bb352"
+  },
+  "name": "Black Infantry Archer",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 10,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Black Infantry Archer.png"
+},
+{
+  "_id": {
+    "$oid": "6856bec17a70e468892bb359"
+  },
+  "name": "Tibor Eggebracht",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "__v": 0,
+  "image": "/uploads/cards/Nilfgaardian Empire/Tibor Eggebracht.png"
+},
+{
+  "_id": {
+    "$oid": "6856c1f8a33dac2bfa28328a"
+  },
+  "name": "Young Emissary",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 5,
+  "image": "/uploads/cards/Nilfgaardian Empire/Young Emissary.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c22da33dac2bfa283290"
+  },
+  "name": "Zerrikanian Fire Scorpion",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Nilfgaardian Empire/Zerrikanian Fire Scorpion.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c327a33dac2bfa28329d"
+  },
+  "name": "Renuald aep Matsen",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Nilfgaardian Empire/Renuald aep Matsen.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c344a33dac2bfa2832a3"
+  },
+  "name": "Siege Engineer",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Nilfgaardian Empire/Siege Engineer.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c359a33dac2bfa2832a9"
+  },
+  "name": "Cahir Mawr Dyffryn aep Ceallach",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Nilfgaardian Empire/Cahir Mawr Dyffryn aep Ceallach.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c371a33dac2bfa2832af"
+  },
+  "name": "Fringilla Vigo",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Nilfgaardian Empire/Fringilla Vigo.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c390a33dac2bfa2832b5"
+  },
+  "name": "Assire var Anahid",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Nilfgaardian Empire/Assire var Anahid.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c3baa33dac2bfa2832bc"
+  },
+  "name": "Shilard Fitz-Oesterlen",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 7,
+  "image": "/uploads/cards/Nilfgaardian Empire/Shilard Fitz-Oesterlen.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c5a068fcc9d15c1bc2e9"
+  },
+  "name": "Menno Coehorn",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "68499c8f8ceafc3c4ea107fd"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Nilfgaardian Empire/Menno Coehorn.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c5c068fcc9d15c1bc2f0"
+  },
+  "name": "Vattier de Rideaux",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Nilfgaardian Empire/Vattier de Rideaux.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c67c68fcc9d15c1bc2f6"
+  },
+  "name": "Morvran Voorhis",
+  "faction": {
+    "$oid": "684ea4e93b046a594446a1fc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 10,
+  "image": "/uploads/cards/Nilfgaardian Empire/Morvran Voorhis.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c7c168fcc9d15c1bc2fd"
+  },
+  "name": "Ghoul",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 1,
+  "image": "/uploads/cards/Monsters/Ghoul.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c7e368fcc9d15c1bc304"
+  },
+  "name": "Nekker",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Nekker.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c90d68fcc9d15c1bc30b"
+  },
+  "name": "Wyvern",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Wyvern.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c92368fcc9d15c1bc311"
+  },
+  "name": "Foglet",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Foglet.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c98d68fcc9d15c1bc317"
+  },
+  "name": "Celaeno Harpy",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Celaeno Harpy.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c99e68fcc9d15c1bc31d"
+  },
+  "name": "Gargoyle",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Gargoyle.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c9af68fcc9d15c1bc323"
+  },
+  "name": "Cockatrice",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Cockatrice.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c9c168fcc9d15c1bc329"
+  },
+  "name": "Harpy",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Harpy.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856c9fd68fcc9d15c1bc32f"
+  },
+  "name": "Endrega",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 2,
+  "image": "/uploads/cards/Monsters/Endrega.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ca1968fcc9d15c1bc336"
+  },
+  "name": "Vampire: Bruxa",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Monsters/Vampire Bruxa.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cae169fcbc6c8c3b26d1"
+  },
+  "name": "Vampire: Fleder",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Monsters/Vampire Fleder.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856caf369fcbc6c8c3b26d8"
+  },
+  "name": "Vampire: Ekimmara",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Monsters/Vampire Ekimmara.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cb0469fcbc6c8c3b26df"
+  },
+  "name": "Arachas",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Monsters/Arachas.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cb1469fcbc6c8c3b26e5"
+  },
+  "name": "Botchling",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Monsters/Botchling.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cb2169fcbc6c8c3b26ec"
+  },
+  "name": "Vampire: Katakan",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Vampire Katakan.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cb7569fcbc6c8c3b26f2"
+  },
+  "name": "Grave Hag",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Grave Hag.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cb8c69fcbc6c8c3b26f8"
+  },
+  "name": "Ice Giant",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Ice Giant.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cbe469fcbc6c8c3b26fe"
+  },
+  "name": "Fire Elemental",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Fire Elemental.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cbfa69fcbc6c8c3b2704"
+  },
+  "name": "Frightener",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Frightener.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc3369fcbc6c8c3b270a"
+  },
+  "name": "Werewolf",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Werewolf.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc4169fcbc6c8c3b2710"
+  },
+  "name": "Griffin",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Griffin.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc5069fcbc6c8c3b2716"
+  },
+  "name": "Plague Maiden",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Plague Maiden.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc5e69fcbc6c8c3b271c"
+  },
+  "name": "Forktail",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Monsters/Forktail.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc7469fcbc6c8c3b2723"
+  },
+  "name": "Crone: Whispess",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Crone: Whispess.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cc8069fcbc6c8c3b272a"
+  },
+  "name": "Crone: Weavess",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Crone: Weavess.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cca369fcbc6c8c3b2731"
+  },
+  "name": "Arachas Behemoth",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Arachas Behemoth.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ccb769fcbc6c8c3b2737"
+  },
+  "name": "Fiend",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Fiend.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cd3269fcbc6c8c3b273e"
+  },
+  "name": "Draug",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Monsters/Draug.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cd3f69fcbc6c8c3b2745"
+  },
+  "name": "Imlerith",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Monsters/Imlerith.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cd4b69fcbc6c8c3b274c"
+  },
+  "name": "Leshen",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Monsters/Leshen.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cd6069fcbc6c8c3b2752"
+  },
+  "name": "Toad",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 7,
+  "image": "/uploads/cards/Monsters/Toad.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856cd7269fcbc6c8c3b2758"
+  },
+  "name": "Earth Elemental",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Earth Elemental.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856e56e69fcbc6c8c3b275e"
+  },
+  "name": "Kambi",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 0,
+  "image": "/uploads/cards/Skellige/Kambi.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856e57869fcbc6c8c3b2765"
+  },
+  "name": "Hemdall",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 11,
+  "image": "/uploads/cards/Skellige/Hemdall.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856e5c869fcbc6c8c3b2771"
+  },
+  "name": "Young Vildkaarl",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 8,
+  "image": "/uploads/cards/Skellige/Young Vildkaarl.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ec4169fcbc6c8c3b277c"
+  },
+  "name": "Young Berserker",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "6856ebed69fcbc6c8c3b2775"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Skellige/Young Berserker.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ec5e69fcbc6c8c3b2783"
+  },
+  "name": "Birna Bran",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c8f8ceafc3c4ea107fd"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Skellige/Birna Bran.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ec9069fcbc6c8c3b278a"
+  },
+  "name": "Draig Bon-Dhu",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499bca8ceafc3c4ea107d9"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Skellige/Draig Bon-Dhu.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6856ecad69fcbc6c8c3b2791"
+  },
+  "name": "Clan Drummond Shieldmaiden",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Clan Drummond Shieldmaiden.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685774ee69fcbc6c8c3b2798"
+  },
+  "name": "Light Longship",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Light Longship.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857750769fcbc6c8c3b279e"
+  },
+  "name": "Clan Tordarroch Armorsmith",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Clan Tordarroch Armorsmith.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857759469fcbc6c8c3b27a5"
+  },
+  "name": "Berserker",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "6856ebed69fcbc6c8c3b2775"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Berserker.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685775b669fcbc6c8c3b27ac"
+  },
+  "name": "Vildkaarl",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 14,
+  "image": "/uploads/cards/Skellige/Vildkaarl.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685775c969fcbc6c8c3b27b2"
+  },
+  "name": "Svanrige",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Svanrige.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685775d769fcbc6c8c3b27b8"
+  },
+  "name": "Udalryk",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Udalryk.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685775e469fcbc6c8c3b27be"
+  },
+  "name": "Donar an Hindar",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Donar an Hindar.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685775ff69fcbc6c8c3b27c4"
+  },
+  "name": "Holger Blackhand",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [],
+  "power": 4,
+  "image": "/uploads/cards/Skellige/Holger Blackhand.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857762e69fcbc6c8c3b27cb"
+  },
+  "name": "Clan Dimun Pirate",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499c4a8ceafc3c4ea107f1"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/Clan Dimun Pirate.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857763f69fcbc6c8c3b27d1"
+  },
+  "name": "Clan Brokvar Archer",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/Clan Brokvar Archer.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857765d69fcbc6c8c3b27d8"
+  },
+  "name": "War Longship",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/War Longship.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857767569fcbc6c8c3b27df"
+  },
+  "name": "Clan An Craite Warrior",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499c628ceafc3c4ea107f9"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/Clan An Craite Warrior.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857768769fcbc6c8c3b27e5"
+  },
+  "name": "Blueboy Lugos",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/Blueboy Lugos.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857769469fcbc6c8c3b27eb"
+  },
+  "name": "Madman Lugos",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Skellige/Madman Lugos.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857772669fcbc6c8c3b27f9"
+  },
+  "name": "Ermion",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "68540a348bed6dbcfb53a947"
+    }
+  ],
+  "power": 8,
+  "image": "/uploads/cards/Skellige/Ermion.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857774569fcbc6c8c3b2800"
+  },
+  "name": "Hjalmar",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Skellige/Hjalmar.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857779c69fcbc6c8c3b280c"
+  },
+  "name": "Olaf",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 12,
+  "image": "/uploads/cards/Skellige/Olaf.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685777c969fcbc6c8c3b2813"
+  },
+  "name": "Cerys",
+  "faction": {
+    "$oid": "684ea2413b046a594446a17a"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 10,
+  "image": "/uploads/cards/Skellige/Cerys.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857787869fcbc6c8c3b2819"
+  },
+  "name": "Bovine Defense Force",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [],
+  "power": 0,
+  "image": "/uploads/cards/Neutral/Bovine Defense Force.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857789869fcbc6c8c3b2820"
+  },
+  "name": "Mysterious Elf",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "68499c558ceafc3c4ea107f5"
+    }
+  ],
+  "power": 0,
+  "image": "/uploads/cards/Neutral/Mysterious Elf.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685778b069fcbc6c8c3b2827"
+  },
+  "name": "Gaunter O’Dimm",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fdaeab515977ab4c395"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Neutral/Gaunter O’Dimm.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685778f769fcbc6c8c3b282e"
+  },
+  "name": "Dandelion",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bca8ceafc3c4ea107d9"
+    }
+  ],
+  "power": 2,
+  "image": "/uploads/cards/Neutral/Dandelion.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857792169fcbc6c8c3b2835"
+  },
+  "name": "Gaunter O’Dimm: Darkness",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 4,
+  "image": "/uploads/cards/Neutral/Gaunter O’Dimm: Darkness.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857794169fcbc6c8c3b283b"
+  },
+  "name": "Emiel Regis Rohellec Terzieff",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Neutral/Emiel Regis Rohellec Terzieff.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857794d69fcbc6c8c3b2841"
+  },
+  "name": "Zoltan Chivay",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 5,
+  "image": "/uploads/cards/Neutral/Zoltan Chivay.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857796e69fcbc6c8c3b2848"
+  },
+  "name": "Olgierd von Everec",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "68499caf8ceafc3c4ea10801"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Neutral/Olgierd von Everec.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857798269fcbc6c8c3b284e"
+  },
+  "name": "Vesemir",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 6,
+  "image": "/uploads/cards/Neutral/Vesemir.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6857799269fcbc6c8c3b2854"
+  },
+  "name": "Villentretenmerth",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [],
+  "power": 7,
+  "image": "/uploads/cards/Neutral/Villentretenmerth.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685779b669fcbc6c8c3b285b"
+  },
+  "name": "Triss Merigold",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 7,
+  "image": "/uploads/cards/Neutral/Triss Merigold.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685779e969fcbc6c8c3b2862"
+  },
+  "name": "Yennefer of Vengerberg",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fcceab515977ab4c391"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    },
+    {
+      "$oid": "68499c8f8ceafc3c4ea107fd"
+    }
+  ],
+  "power": 8,
+  "image": "/uploads/cards/Neutral/Yennefer of Vengerberg.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68577a0469fcbc6c8c3b2869"
+  },
+  "name": "Cirilla Fiona Elen Riannon",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 15,
+  "image": "/uploads/cards/Neutral/Cirilla Fiona Elen Riannon.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68577a1069fcbc6c8c3b2870"
+  },
+  "name": "Geralt of Rivia",
+  "faction": {
+    "$oid": "684998ed185b94bdd00a58d8"
+  },
+  "typeCard": {
+    "$oid": "684e9fb1eab515977ab4c38d"
+  },
+  "ability": [
+    {
+      "$oid": "68499bfe8ceafc3c4ea107e1"
+    }
+  ],
+  "power": 15,
+  "image": "/uploads/cards/Neutral/Geralt of Rivia.png",
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685a2080f797f8ca68010d4d"
+  },
+  "name": "Crone: Brewess",
+  "faction": {
+    "$oid": "68499950185b94bdd00a58dc"
+  },
+  "typeCard": {
+    "$oid": "684ea1543b046a594446a162"
+  },
+  "ability": [
+    {
+      "$oid": "684ea1e93b046a594446a16e"
+    }
+  ],
+  "power": 6,
+  "image": "/uploads/cards/Monsters/Crone Brewess.png",
   "__v": 0
 }]

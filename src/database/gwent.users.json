@@ -4,19 +4,41 @@
   },
   "username": "AaronGanteng",
   "email": "aaronganteng@gmail.com",
-  "password": "$2b$10$4fJ6MGuO5ZOT3XpAOOr.7.qGTztUGPj5JJyH5Sx549aLsRTtmcQwy",
+  "password": "$2b$10$lj233tUvDDf0bohWLMYE1.EqLT2RAfvpzPVo2gK.yjoIow0GCrgUG",
   "role": "admin",
   "saldo": 0,
-  "totalWins": 0,
-  "deck": [],
   "deleted": false,
   "createdAt": {
     "$date": "2025-06-11T13:53:12.657Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T13:53:12.657Z"
+    "$date": "2025-06-23T12:55:06.043Z"
   },
-  "__v": 0
+  "__v": 3,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [
+    {
+      "powerUp": {
+        "$oid": "6859328493877def6be41616"
+      },
+      "quantity": 5,
+      "_id": {
+        "$oid": "68594cc0b2b6ce24a1300461"
+      }
+    },
+    {
+      "powerUp": {
+        "$oid": "685932b893877def6be4161a"
+      },
+      "quantity": 1,
+      "_id": {
+        "$oid": "68594eaaa12f36d7ad5a55e9"
+      }
+    }
+  ]
 },
 {
   "_id": {
@@ -27,16 +49,19 @@
   "password": "$2b$10$kS05yE.CmIzBXYBcsuNTHeiSmZz1DMo90YBVFAZtkNrzi3TSaTZMi",
   "role": "admin",
   "saldo": 0,
-  "totalWins": 0,
-  "deck": [],
   "deleted": false,
   "createdAt": {
     "$date": "2025-06-11T14:00:16.101Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T14:00:16.101Z"
+    "$date": "2025-06-23T11:41:13.325Z"
   },
-  "__v": 0
+  "__v": 0,
+  "coin": 18,
+  "totalPlay": 19,
+  "totalWin": 9,
+  "winrate": 47.37,
+  "inventory": []
 },
 {
   "_id": {
@@ -47,8 +72,6 @@
   "password": "$2b$10$hCQDlwN2EMUPKnUiFHfS5eYiS6A7tf.Yipph4q6pIuHFzMkBtW/Ay",
   "role": "admin",
   "saldo": 0,
-  "totalWins": 0,
-  "deck": [],
   "deleted": false,
   "createdAt": {
     "$date": "2025-06-11T14:01:01.659Z"
@@ -56,7 +79,12 @@
   "updatedAt": {
     "$date": "2025-06-11T14:01:01.659Z"
   },
-  "__v": 0
+  "__v": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "invetory": []
 },
 {
   "_id": {
@@ -67,14 +95,247 @@
   "password": "$2b$10$.l5oMw179RgKMP6mGIgPveGnT5jLQ7UEbVz4EaCKIyQiiHmArMzaG",
   "role": "player",
   "saldo": 0,
-  "totalWins": 0,
-  "deck": [],
   "deleted": false,
   "createdAt": {
     "$date": "2025-06-11T14:01:42.939Z"
   },
   "updatedAt": {
-    "$date": "2025-06-11T14:01:42.939Z"
+    "$date": "2025-06-22T18:58:22.373Z"
   },
-  "__v": 0
+  "__v": 0,
+  "coin": 26,
+  "totalPlay": 19,
+  "totalWin": 7,
+  "winrate": 36.84,
+  "inventory": []
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6921"
+  },
+  "username": "Brendon.Strosin33",
+  "email": "Brendon_Strosin@gmail.com",
+  "password": "$2b$10$jZLD.GiszCeUIHZayv9QUuqzoOJ4sGqhyKN2UCEap5lF0xoPopd1O",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.259Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.259Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6922"
+  },
+  "username": "Reta_Parker-Hodkiewicz71",
+  "email": "Reta.Parker-Hodkiewicz14@gmail.com",
+  "password": "$2b$10$eTVi.okEquW3PDjaoZdkBeJFXUzTcdZdkDyVURU/MsMX.a0jZEKe6",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6923"
+  },
+  "username": "Donald_Price",
+  "email": "Donald.Price@hotmail.com",
+  "password": "$2b$10$KArESZUnrII9iVI0it3THeJrFwDPuTGwORnxsh4vkkp766Ve3RFya",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6924"
+  },
+  "username": "Shanny.Torphy",
+  "email": "Shanny_Torphy46@hotmail.com",
+  "password": "$2b$10$29joae1h0Dy5QluIoLWOHO2BNbz/Nzy7PBwacE3uqhDI3wv3mPA/W",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6925"
+  },
+  "username": "Alana_Cole",
+  "email": "Alana.Cole@gmail.com",
+  "password": "$2b$10$L9GafxsWdculOoiUKSSL/eBhX0OMblgy2Z/f.gwvzs6ONwSiu5R7q",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6926"
+  },
+  "username": "Dayne_Runolfsdottir21",
+  "email": "Dayne.Runolfsdottir@gmail.com",
+  "password": "$2b$10$bs1JGgqyR6KQt0Pq8JfEru.xT6Daqqz.2ITjWhKj4UKRNO3OmeKa6",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6927"
+  },
+  "username": "Bret.Dare28",
+  "email": "Bret.Dare@gmail.com",
+  "password": "$2b$10$dcNh3/rMfNXxMquQPPioR.GDB3zt4EiQEZeNxMkmRMhhL0fhkN45q",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6928"
+  },
+  "username": "Asa_Gulgowski82",
+  "email": "Asa_Gulgowski61@gmail.com",
+  "password": "$2b$10$D.UY2fGUm7gV7K6HwHXI2OLZbPBOEsQE0HSOgJdtTJuJg2YqtGVq2",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f6929"
+  },
+  "username": "Oceane.Stracke",
+  "email": "Oceane_Stracke@gmail.com",
+  "password": "$2b$10$GTZBlD1WwQ.lhP.8crG4ae/Zyrp8ZlsNDyCLzsDJzEUHXb3o7RUai",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "685ae2f18c5f80d60a4f692a"
+  },
+  "username": "Ardella_Bogisich",
+  "email": "Ardella.Bogisich51@hotmail.com",
+  "password": "$2b$10$b/LkuiZdoQPkayAbZjQ8x.hj68AyKpVAbqQInzNhm8l8ta1nZcdqW",
+  "role": "player",
+  "saldo": 0,
+  "coin": 0,
+  "totalPlay": 0,
+  "totalWin": 0,
+  "winrate": 0,
+  "inventory": [],
+  "deleted": false,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-24T17:40:01.261Z"
+  }
 }]

@@ -1,0 +1,56 @@
+[{
+  "_id": {
+    "$oid": "68594e58729184ed296a8a5d"
+  },
+  "Htrans": {
+    "$oid": "68594e58729184ed296a8a5b"
+  },
+  "powerUp": {
+    "$oid": "6859328493877def6be41616"
+  },
+  "qty": 2,
+  "harga": 30000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594eaaa12f36d7ad5a55ed"
+  },
+  "Htrans": {
+    "$oid": "68594eaaa12f36d7ad5a55eb"
+  },
+  "powerUp": {
+    "$oid": "685932b893877def6be4161a"
+  },
+  "qty": 1,
+  "harga": 5000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6859b3f57a3364edf18f3f0a"
+  },
+  "Htrans": {
+    "$oid": "6859b3f57a3364edf18f3f08"
+  },
+  "powerUp": {
+    "$oid": "685932c393877def6be4161e"
+  },
+  "qty": 3,
+  "harga": 30000,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6859b41d7a3364edf18f3f15"
+  },
+  "Htrans": {
+    "$oid": "6859b41d7a3364edf18f3f13"
+  },
+  "powerUp": {
+    "$oid": "685932b893877def6be4161a"
+  },
+  "qty": 3,
+  "harga": 15000,
+  "__v": 0
+}]

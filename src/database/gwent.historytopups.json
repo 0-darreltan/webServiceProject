@@ -1,0 +1,170 @@
+[{
+  "_id": {
+    "$oid": "685815d7d6319be7b8f88593"
+  },
+  "user": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "amount": 5000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T14:40:23.092Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T14:40:23.092Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "685815ead6319be7b8f88598"
+  },
+  "user": {
+    "$oid": "68498c4684162c28eda52f78"
+  },
+  "amount": 50000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T14:40:42.861Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T14:40:42.861Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68581625d6319be7b8f8859e"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 50000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-22T14:41:41.204Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-22T14:41:41.204Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68593b2289797605f0ea310f"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 50000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T11:31:46.887Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T11:31:46.887Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68593b5889797605f0ea3116"
+  },
+  "user": {
+    "$oid": "68498bf084162c28eda52f72"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T11:32:40.715Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T11:32:40.715Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594df34e87e10f4837c06a"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T12:52:03.672Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T12:52:03.672Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594df84e87e10f4837c071"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T12:52:08.597Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T12:52:08.597Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594e36729184ed296a8a40"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T12:53:10.423Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T12:53:10.423Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594e38729184ed296a8a47"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T12:53:12.287Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T12:53:12.287Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68594e39729184ed296a8a4e"
+  },
+  "user": {
+    "$oid": "68498a4884162c28eda52f69"
+  },
+  "amount": 10000,
+  "deleted": false,
+  "createdAt": {
+    "$date": "2025-06-23T12:53:13.203Z"
+  },
+  "updatedAt": {
+    "$date": "2025-06-23T12:53:13.203Z"
+  },
+  "__v": 0
+}]
