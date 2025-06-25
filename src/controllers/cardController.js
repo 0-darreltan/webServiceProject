@@ -87,11 +87,43 @@ const getSingleCard = async (req, res) => {
   const { _id } = req.params;
 
   try {
-    const card = await Card.findById(_id);
+    const card = await Card.findById(_id)
+      .populate("faction", "name")
+      .populate("typeCard", "name")
+      .populate("ability", "name");
+
     if (!card) {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
-    return res.status(200).json(card);
+
+    const result = {
+      name: card.name,
+      faction: card.faction.name,
+      typeCard: card.typeCard.name,
+      ability: card.ability.map((abil) => abil.name),
+      power: card.power,
+      imageUrl: card.image,
+    };
+
+    return res.status(200).json(result);
+  } catch (error) {
+    return res.status(500).json({ message: error.message });
+  }
+};
+
+const getImageCard = async (req, res) => {
+  const { _id } = req.params;
+
+  try {
+    const card = await Card.findById(_id);
+
+    if (!card) {
+      return res.status(404).json({ message: "Kartu tidak ditemukan!" });
+    }
+
+    const fullPath = `${card.image}.png`;
+
+    return res.sendFile(fullPath, { root: "." });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
@@ -863,6 +895,7 @@ module.exports = {
   getCardApi,
   getAllCard,
   getSingleCard,
+  getImageCard,
   tambahCard,
   updateCard,
   deleteCard,

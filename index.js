@@ -18,7 +18,7 @@ app.use("/api/", userRouter);
 app.use("/api/card", cardRouter);
 
 app.get("/", (req, res) => {
-  res.status(200).json({ message: "Welcome to the Web Service API!" });
+  res.status(200).json({ message: "Welcome to the Gwent API!" });
 });
 
 // --- Vercel Change 2: Remove startServer() and app.listen() ---

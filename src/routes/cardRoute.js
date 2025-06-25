@@ -8,6 +8,7 @@ const {
   getCardApi,
   getAllCard,
   getSingleCard,
+  getImageCard,
   tambahCard,
   updateCard,
   deleteCard,
@@ -113,6 +114,7 @@ router.delete("/powerup/:_id", [verifyApiKey, cekAdmin], deletePowerUp);
 router.get("/api", getCardApi);
 router.get("/", getAllCard);
 router.get("/:_id", getSingleCard);
+router.get("/image/:_id", getImageCard);
 router.post(
   "/",
   [verifyApiKey, cekAdmin],
