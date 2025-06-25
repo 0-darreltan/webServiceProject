@@ -23,7 +23,7 @@ const {
   beliPowerUp,
   detailTrans,
   headerTrans,
-} = require("../controllers/UserController");
+} = require("../controllers/userController");
 
 const verifyApiKey = require("../middlewares/verifyApiKey");
 const cekAdmin = require("../middlewares/cekAdmin");
