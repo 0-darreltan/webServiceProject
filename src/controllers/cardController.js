@@ -123,9 +123,19 @@ const getImageCard = async (req, res) => {
 
     const imagePathFromDB = card.image;
 
+    if (!imagePathFromDB) {
+      return res.status(404).json({ message: "Gambar kartu tidak ditemukan!" });
+    }
+
+    console.log("Image path from DB:", imagePathFromDB);
+
     const baseUrl = `${req.protocol}://${req.get("host")}`;
 
+    console.log("Base URL:", baseUrl);
+
     const finalImageUrl = `${baseUrl}${imagePathFromDB}`;
+
+    console.log("Final image URL:", finalImageUrl);
 
     res.sendFile({ finalImageUrl }, { root: "." });
   } catch (error) {
