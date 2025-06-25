@@ -121,10 +121,18 @@ const getImageCard = async (req, res) => {
       return res.status(404).json({ message: "Kartu tidak ditemukan!" });
     }
 
-    // Buat field baru secara dinamis yang berisi URL publik gambar
-    const imageUrl = `${req.protocol}://${req.get("host")}${card.image}`;
+    const imagePathFromDB = card.image;
 
-    return res.sendFile(imageUrl, { root: "." });
+    const baseUrl = `${req.protocol}://${req.get("host")}`;
+
+    const finalImageUrl = `${baseUrl}${imagePathFromDB}`;
+
+    res.status(200).json({
+      _id: card._id,
+      name: card.name,
+      imagePath: card.imagePath, // ini path asli dari DB
+      imageUrl: finalImageUrl, // ini URL lengkap yang bisa diakses browser
+    });
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
