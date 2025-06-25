@@ -137,12 +137,7 @@ const getImageCard = async (req, res) => {
 
     console.log("Final image URL:", finalImageUrl);
 
-    res.status(200).json({
-      success: true,
-      cardId: card._id,
-      cardName: card.name,
-      imageUrl: finalImageUrl,
-    });
+    res.redirect(301, finalImageUrl);
   } catch (error) {
     return res.status(500).json({ message: error.message });
   }
