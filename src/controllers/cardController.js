@@ -124,8 +124,6 @@ const getImageCard = async (req, res) => {
     // Buat field baru secara dinamis yang berisi URL publik gambar
     const imageUrl = `${req.protocol}://${req.get("host")}${card.image}`;
 
-    console.log("Fetching image from path:", fullPath);
-
     return res.sendFile(imageUrl, { root: "." });
   } catch (error) {
     return res.status(500).json({ message: error.message });
