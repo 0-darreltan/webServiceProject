@@ -16,7 +16,7 @@
   ],
   "power": 1,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Kaedweni Siege Expert"
+  "image": "/uploads/cards/NortherRealms/KaedweniSiegeExpert"
 },
 {
   "_id": {
@@ -32,7 +32,7 @@
   "ability": [],
   "power": 1,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Redanian Foot Soldier"
+  "image": "/uploads/cards/NorthernRealms/RedanianFootSoldier"
 },
 {
   "_id": {
@@ -52,7 +52,7 @@
   ],
   "power": 1,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Poor Fucking Infantry"
+  "image": "/uploads/cards/NorthernRealms/PoorFuckingInfantry"
 },
 {
   "_id": {
@@ -72,7 +72,7 @@
   ],
   "power": 1,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Thaler"
+  "image": "/uploads/cards/NorthernRealms/Thaler"
 },
 {
   "_id": {
@@ -88,7 +88,7 @@
   "ability": [],
   "power": 2,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Yarpen Zigrin"
+  "image": "/uploads/cards/NorthernRealms/YarpenZigrin"
 },
 {
   "_id": {
@@ -108,7 +108,7 @@
   ],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Blue Stripes Commando"
+  "image": "/uploads/cards/NorthernRealms/BlueStripesCommando"
 },
 {
   "_id": {
@@ -124,7 +124,7 @@
   "ability": [],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Sheldon Skaggs"
+  "image": "/uploads/cards/NorthernRealms/SheldonSkaggs"
 },
 {
   "_id": {
@@ -140,7 +140,7 @@
   "ability": [],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Sabrina Glevissig"
+  "image": "/uploads/cards/NorthernRealms/SabrinaGlevissig"
 },
 {
   "_id": {
@@ -160,7 +160,7 @@
   ],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Sigismund Dijkstra"
+  "image": "/uploads/cards/NorthernRealms/SigismundDijkstra"
 },
 {
   "_id": {
@@ -180,7 +180,7 @@
   ],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Dun Banner Medic"
+  "image": "/uploads/cards/NorthernRealms/DunBannerMedic"
 },
 {
   "_id": {
@@ -200,7 +200,7 @@
   ],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Crinfrid Reavers Dragon Hunter"
+  "image": "/uploads/cards/NorthernRealms/CrinfridReaversDragonHunter"
 },
 {
   "_id": {
@@ -220,7 +220,7 @@
   ],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Prince Stennis"
+  "image": "/uploads/cards/NorthernRealms/PrinceStennis"
 },
 {
   "_id": {
@@ -236,7 +236,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Sile de Tansarville"
+  "image": "/uploads/cards/NorthernRealms/SiledeTansarville"
 },
 {
   "_id": {
@@ -252,7 +252,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Keira Metz"
+  "image": "/uploads/cards/NorthernRealms/KeiraMetz"
 },
 {
   "_id": {
@@ -268,7 +268,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Siegfried od Denesle"
+  "image": "/uploads/cards/NorthernRealms/SiegfriedodDenesle"
 },
 {
   "_id": {
@@ -284,7 +284,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Ves"
+  "image": "/uploads/cards/NorthernRealms/Ves"
 },
 {
   "_id": {
@@ -300,7 +300,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Siege Tower"
+  "image": "/uploads/cards/NorthernRealms/SiegeTower"
 },
 {
   "_id": {
@@ -316,7 +316,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Ballista"
+  "image": "/uploads/cards/NorthernRealms/Ballista"
 },
 {
   "_id": {
@@ -332,7 +332,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Trebuchet"
+  "image": "/uploads/cards/NorthernRealms/Trebuchet"
 },
 {
   "_id": {
@@ -348,7 +348,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Dethmold"
+  "image": "/uploads/cards/NorthernRealms/Dethmold"
 },
 {
   "_id": {
@@ -368,7 +368,7 @@
   ],
   "power": 8,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Catapult"
+  "image": "/uploads/cards/NorthernRealms/Catapult"
 },
 {
   "_id": {
@@ -388,7 +388,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Philippa Eilhart"
+  "image": "/uploads/cards/NorthernRealms/PhilippaEilhart"
 },
 {
   "_id": {
@@ -408,7 +408,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Esterad Thyssen"
+  "image": "/uploads/cards/NorthernRealms/EsteradThyssen"
 },
 {
   "_id": {
@@ -428,7 +428,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/John Natalis"
+  "image": "/uploads/cards/NorthernRealms/JohnNatalis"
 },
 {
   "_id": {
@@ -448,7 +448,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Northern Realms/Vernon Roche"
+  "image": "/uploads/cards/NorthernRealms/VernonRoche"
 },
 {
   "_id": {
@@ -468,7 +468,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Havekar Healer"
+  "image": "/uploads/cards/Scoia'tael/HavekarHealer"
 },
 {
   "_id": {
@@ -484,7 +484,7 @@
   "ability": [],
   "power": 1,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Riordain"
+  "image": "/uploads/cards/Scoia'ttael/Riordain"
 },
 {
   "_id": {
@@ -504,7 +504,7 @@
   ],
   "power": 2,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Elven Skirmisher"
+  "image": "/uploads/cards/Scoia'tael/ElvenSkirmisher"
 },
 {
   "_id": {
@@ -540,7 +540,7 @@
   ],
   "power": 3,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Dwarven Skirmisher"
+  "image": "/uploads/cards/Scoia'tael/DwarvenSkirmisher"
 },
 {
   "_id": {
@@ -556,7 +556,7 @@
   "ability": [],
   "power": 3,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Ciaran aep Easnillien"
+  "image": "/uploads/cards/Scoia'tael/CiaranaepEasnillien"
 },
 {
   "_id": {
@@ -572,7 +572,7 @@
   "ability": [],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Dol Blathanna Archer"
+  "image": "/uploads/cards/Scoia'tael/DolBlathannaArcher"
 },
 {
   "_id": {
@@ -588,7 +588,7 @@
   "ability": [],
   "power": 4,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Vrihedd Brigade Recruit"
+  "image": "/uploads/cards/Scoia'tael/VriheddBrigadeRecruit"
 },
 {
   "_id": {
@@ -604,7 +604,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Mahakaman Defender"
+  "image": "/uploads/cards/Scoia'tael/MahakamanDefender"
 },
 {
   "_id": {
@@ -620,7 +620,7 @@
   "ability": [],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Vrihedd Brigade Veteran"
+  "image": "/uploads/cards/Scoia'tael/VriheddBrigadeVeteran"
 },
 {
   "_id": {
@@ -640,7 +640,7 @@
   ],
   "power": 5,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Havekar Smuggler"
+  "image": "/uploads/cards/Scoia'tael/HavekarSmuggler"
 },
 {
   "_id": {
@@ -656,7 +656,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Dol Blathanna Scout"
+  "image": "/uploads/cards/Scoia'tael/DolBlathannaScout"
 },
 {
   "_id": {
@@ -672,7 +672,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Barclay Els"
+  "image": "/uploads/cards/Scoia'tael/BarclayEls"
 },
 {
   "_id": {
@@ -704,7 +704,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Filavandrel aen Fidhail"
+  "image": "/uploads/cards/Scoia'tael/FilavandrelaenFidhail"
 },
 {
   "_id": {
@@ -720,7 +720,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Ida Emean aep Sivney"
+  "image": "/uploads/cards/Scoia'tael/IdaEmeanaepSivney"
 },
 {
   "_id": {
@@ -736,7 +736,7 @@
   "ability": [],
   "power": 6,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Dennis Cranmer"
+  "image": "/uploads/cards/Scoia'tael/DennisCranmer"
 },
 {
   "_id": {
@@ -819,7 +819,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Scoia'tael/Isengrim Faoiltiarna"
+  "image": "/uploads/cards/Scoia'tael/IsengrimFaoiltiarna"
 },
 {
   "_id": {
@@ -885,7 +885,7 @@
   "_id": {
     "$oid": "68540b388bed6dbcfb53a96e"
   },
-  "name": "Commander’s Horn",
+  "name": "Commander's Horn",
   "faction": {
     "$oid": "684998ed185b94bdd00a58d8"
   },
@@ -899,7 +899,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Commander's Horn"
+  "image": "/uploads/cards/Neutral/Commander'sHorn"
 },
 {
   "_id": {
@@ -959,7 +959,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Skellige Storm"
+  "image": "/uploads/cards/Neutral/SkelligeStorm"
 },
 {
   "_id": {
@@ -979,7 +979,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Clear Weather"
+  "image": "/uploads/cards/Neutral/ClearWeather"
 },
 {
   "_id": {
@@ -999,7 +999,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Torrential Rain"
+  "image": "/uploads/cards/Neutral/TorrentialRain"
 },
 {
   "_id": {
@@ -1019,7 +1019,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Impenetrable Fog"
+  "image": "/uploads/cards/Neutral/ImpenetrableFog"
 },
 {
   "_id": {
@@ -1039,7 +1039,7 @@
   ],
   "power": 0,
   "__v": 0,
-  "image": "/uploads/cards/Neutral/Biting Frost"
+  "image": "/uploads/cards/Neutral/BitingFrost"
 },
 {
   "_id": {
@@ -1059,7 +1059,7 @@
   ],
   "power": 3,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Impera Brigade Guard.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/ImperaBrigadeGuard.png"
 },
 {
   "_id": {
@@ -1075,7 +1075,7 @@
   "ability": [],
   "power": 3,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Puttkammer.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/Puttkammer.png"
 },
 {
   "_id": {
@@ -1091,7 +1091,7 @@
   "ability": [],
   "power": 3,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Rotten Mangonel.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/RottenMangonel.png"
 },
 {
   "_id": {
@@ -1111,7 +1111,7 @@
   ],
   "power": 9,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Stefan Skellen.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/StefanSkellen.png"
 },
 {
   "_id": {
@@ -1127,7 +1127,7 @@
   "ability": [],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Heavy Zerrikanian Fire Scorpion.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/HeavyZerrikanianFireScorpion.png"
 },
 {
   "_id": {
@@ -1143,7 +1143,7 @@
   "ability": [],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Black Infantry Archer.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/BlackInfantryArcher.png"
 },
 {
   "_id": {
@@ -1163,7 +1163,7 @@
   ],
   "power": 10,
   "__v": 0,
-  "image": "/uploads/cards/Nilfgaardian Empire/Tibor Eggebracht.png"
+  "image": "/uploads/cards/NilfgaardianEmpire/TiborEggebracht.png"
 },
 {
   "_id": {
@@ -1182,7 +1182,7 @@
     }
   ],
   "power": 5,
-  "image": "/uploads/cards/Nilfgaardian Empire/Young Emissary.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/YoungEmissary.png",
   "__v": 0
 },
 {
@@ -1198,7 +1198,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Nilfgaardian Empire/Zerrikanian Fire Scorpion.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/ZerrikanianFireScorpion.png",
   "__v": 0
 },
 {
@@ -1214,7 +1214,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Nilfgaardian Empire/Renuald aep Matsen.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/RenualداepMatsen.png",
   "__v": 0
 },
 {
@@ -1230,7 +1230,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Nilfgaardian Empire/Siege Engineer.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/SiegeEngineer.png",
   "__v": 0
 },
 {
@@ -1246,7 +1246,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Nilfgaardian Empire/Cahir Mawr Dyffryn aep Ceallach.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/CahirMawrDyffrynाepCeallach.png",
   "__v": 0
 },
 {
@@ -1262,7 +1262,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Nilfgaardian Empire/Fringilla Vigo.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/FringillaVigo.png",
   "__v": 0
 },
 {
@@ -1278,7 +1278,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Nilfgaardian Empire/Assire var Anahid.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/AssirevarAnahid.png",
   "__v": 0
 },
 {
@@ -1298,7 +1298,7 @@
     }
   ],
   "power": 7,
-  "image": "/uploads/cards/Nilfgaardian Empire/Shilard Fitz-Oesterlen.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/ShilardFitz-Oesterlen.png",
   "__v": 0
 },
 {
@@ -1321,7 +1321,7 @@
     }
   ],
   "power": 10,
-  "image": "/uploads/cards/Nilfgaardian Empire/Menno Coehorn.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/MennoCoehorn.png",
   "__v": 0
 },
 {
@@ -1341,7 +1341,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Nilfgaardian Empire/Vattier de Rideaux.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/VattierdeRideaux.png",
   "__v": 0
 },
 {
@@ -1357,7 +1357,7 @@
   },
   "ability": [],
   "power": 10,
-  "image": "/uploads/cards/Nilfgaardian Empire/Morvran Voorhis.png",
+  "image": "/uploads/cards/NilfgaardianEmpire/MorvranVoorhis.png",
   "__v": 0
 },
 {
@@ -1445,7 +1445,7 @@
   },
   "ability": [],
   "power": 2,
-  "image": "/uploads/cards/Monsters/Celaeno Harpy.png",
+  "image": "/uploads/cards/Monsters/CelaenoHarpy.png",
   "__v": 0
 },
 {
@@ -1529,7 +1529,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Monsters/Vampire Bruxa.png",
+  "image": "/uploads/cards/Monsters/VampireBruxa.png",
   "__v": 0
 },
 {
@@ -1549,7 +1549,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Monsters/Vampire Fleder.png",
+  "image": "/uploads/cards/Monsters/VampireFleder.png",
   "__v": 0
 },
 {
@@ -1569,7 +1569,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Monsters/Vampire Ekimmara.png",
+  "image": "/uploads/cards/Monsters/VampireEkimmara.png",
   "__v": 0
 },
 {
@@ -1625,7 +1625,7 @@
     }
   ],
   "power": 5,
-  "image": "/uploads/cards/Monsters/Vampire Katakan.png",
+  "image": "/uploads/cards/Monsters/VampireKatakan.png",
   "__v": 0
 },
 {
@@ -1641,7 +1641,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Monsters/Grave Hag.png",
+  "image": "/uploads/cards/Monsters/GraveHag.png",
   "__v": 0
 },
 {
@@ -1657,7 +1657,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Monsters/Ice Giant.png",
+  "image": "/uploads/cards/Monsters/IceGiant.png",
   "__v": 0
 },
 {
@@ -1673,7 +1673,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Fire Elemental.png",
+  "image": "/uploads/cards/Monsters/FireElemental.png",
   "__v": 0
 },
 {
@@ -1737,7 +1737,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Monsters/Plague Maiden.png",
+  "image": "/uploads/cards/Monsters/PlagueMaiden.png",
   "__v": 0
 },
 {
@@ -1773,7 +1773,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Crone: Whispess.png",
+  "image": "/uploads/cards/Monsters/CroneWhispess.png",
   "__v": 0
 },
 {
@@ -1793,7 +1793,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Crone: Weavess.png",
+  "image": "/uploads/cards/Monsters/CroneWeavess.png",
   "__v": 0
 },
 {
@@ -1813,7 +1813,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Arachas Behemoth.png",
+  "image": "/uploads/cards/Monsters/ArachasBehemoth.png",
   "__v": 0
 },
 {
@@ -1921,7 +1921,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Earth Elemental.png",
+  "image": "/uploads/cards/Monsters/EarthElemental.png",
   "__v": 0
 },
 {
@@ -1977,7 +1977,7 @@
     }
   ],
   "power": 8,
-  "image": "/uploads/cards/Skellige/Young Vildkaarl.png",
+  "image": "/uploads/cards/Skellige/YoungVildkaarl.png",
   "__v": 0
 },
 {
@@ -1997,7 +1997,7 @@
     }
   ],
   "power": 2,
-  "image": "/uploads/cards/Skellige/Young Berserker.png",
+  "image": "/uploads/cards/Skellige/YoungBerserker.png",
   "__v": 0
 },
 {
@@ -2017,7 +2017,7 @@
     }
   ],
   "power": 2,
-  "image": "/uploads/cards/Skellige/Birna Bran.png",
+  "image": "/uploads/cards/Skellige/BirnaBran.png",
   "__v": 0
 },
 {
@@ -2037,7 +2037,7 @@
     }
   ],
   "power": 2,
-  "image": "/uploads/cards/Skellige/Draig Bon-Dhu.png",
+  "image": "/uploads/cards/Skellige/DraigBon-Dhu.png",
   "__v": 0
 },
 {
@@ -2057,7 +2057,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Skellige/Clan Drummond Shieldmaiden.png",
+  "image": "/uploads/cards/Skellige/ClanDrummondShieldmaiden.png",
   "__v": 0
 },
 {
@@ -2077,7 +2077,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Skellige/Light Longship.png",
+  "image": "/uploads/cards/Skellige/LightLongship.png",
   "__v": 0
 },
 {
@@ -2089,11 +2089,11 @@
     "$oid": "684ea2413b046a594446a17a"
   },
   "typeCard": {
-    "$oid": "684e9fb1eab515977ab4c38d"
+       "$oid": "684e9fb1eab515977ab4c38d"
   },
   "ability": [],
   "power": 4,
-  "image": "/uploads/cards/Skellige/Clan Tordarroch Armorsmith.png",
+  "image": "/uploads/cards/Skellige/ClanTordarrochArmorsmith.png",
   "__v": 0
 },
 {
@@ -2181,7 +2181,7 @@
   },
   "ability": [],
   "power": 4,
-  "image": "/uploads/cards/Skellige/Donar an Hindar.png",
+  "image": "/uploads/cards/Skellige/DonarAnHindar.png",
   "__v": 0
 },
 {
@@ -2197,7 +2197,7 @@
   },
   "ability": [],
   "power": 4,
-  "image": "/uploads/cards/Skellige/Holger Blackhand.png",
+  "image": "/uploads/cards/Skellige/HolgerBlackhand.png",
   "__v": 0
 },
 {
@@ -2217,7 +2217,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Skellige/Clan Dimun Pirate.png",
+  "image": "/uploads/cards/Skellige/ClanDimunPirate.png",
   "__v": 0
 },
 {
@@ -2233,7 +2233,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Skellige/Clan Brokvar Archer.png",
+  "image": "/uploads/cards/Skellige/ClanBrokvarArcher.png",
   "__v": 0
 },
 {
@@ -2253,7 +2253,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Skellige/War Longship.png",
+  "image": "/uploads/cards/Skellige/WarLongship.png",
   "__v": 0
 },
 {
@@ -2273,7 +2273,7 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Skellige/Clan An Craite Warrior.png",
+  "image": "/uploads/cards/Skellige/ClanAnCraiteWarrior.png",
   "__v": 0
 },
 {
@@ -2289,7 +2289,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Skellige/Blueboy Lugos.png",
+  "image": "/uploads/cards/Skellige/BlueboyLugos.png",
   "__v": 0
 },
 {
@@ -2305,7 +2305,7 @@
   },
   "ability": [],
   "power": 6,
-  "image": "/uploads/cards/Skellige/Madman Lugos.png",
+  "image": "/uploads/cards/Skellige/MadmanLugos.png",
   "__v": 0
 },
 {
@@ -2407,7 +2407,7 @@
   },
   "ability": [],
   "power": 0,
-  "image": "/uploads/cards/Neutral/Bovine Defense Force.png",
+  "image": "/uploads/cards/Neutral/BovineDefenseForce.png",
   "__v": 0
 },
 {
@@ -2430,14 +2430,14 @@
     }
   ],
   "power": 0,
-  "image": "/uploads/cards/Neutral/Mysterious Elf.png",
+  "image": "/uploads/cards/Neutral/MysteriousElf.png",
   "__v": 0
 },
 {
   "_id": {
     "$oid": "685778b069fcbc6c8c3b2827"
   },
-  "name": "Gaunter O’Dimm",
+  "name": "Gaunter O'Dimm",
   "faction": {
     "$oid": "684998ed185b94bdd00a58d8"
   },
@@ -2450,7 +2450,7 @@
     }
   ],
   "power": 2,
-  "image": "/uploads/cards/Neutral/Gaunter O’Dimm.png",
+  "image": "/uploads/cards/Neutral/GaunterO'Dimm.png",
   "__v": 0
 },
 {
@@ -2477,7 +2477,7 @@
   "_id": {
     "$oid": "6857792169fcbc6c8c3b2835"
   },
-  "name": "Gaunter O’Dimm: Darkness",
+  "name": "Gaunter O'Dimm: Darkness",
   "faction": {
     "$oid": "684998ed185b94bdd00a58d8"
   },
@@ -2490,7 +2490,7 @@
     }
   ],
   "power": 4,
-  "image": "/uploads/cards/Neutral/Gaunter O’Dimm: Darkness.png",
+  "image": "/uploads/cards/Neutral/GaunterO'Dimm.png",
   "__v": 0
 },
 {
@@ -2506,7 +2506,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Neutral/Emiel Regis Rohellec Terzieff.png",
+  "image": "/uploads/cards/Neutral/EmielRegisRohellecTerzieff.png",
   "__v": 0
 },
 {
@@ -2522,7 +2522,7 @@
   },
   "ability": [],
   "power": 5,
-  "image": "/uploads/cards/Neutral/Zoltan Chivay.png",
+  "image": "/uploads/cards/Neutral/ZoltanChivay.png",
   "__v": 0
 },
 {
@@ -2542,28 +2542,12 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Neutral/Olgierd von Everec.png",
+  "image": "/uploads/cards/Neutral/OlgierdvonEverec.png",
   "__v": 0
 },
 {
   "_id": {
     "$oid": "6857798269fcbc6c8c3b284e"
-  },
-  "name": "Vesemir",
-  "faction": {
-    "$oid": "684998ed185b94bdd00a58d8"
-  },
-  "typeCard": {
-    "$oid": "684e9fb1eab515977ab4c38d"
-  },
-  "ability": [],
-  "power": 6,
-  "image": "/uploads/cards/Neutral/Vesemir.png",
-  "__v": 0
-},
-{
-  "_id": {
-    "$oid": "6857799269fcbc6c8c3b2854"
   },
   "name": "Villentretenmerth",
   "faction": {
@@ -2594,7 +2578,7 @@
     }
   ],
   "power": 7,
-  "image": "/uploads/cards/Neutral/Triss Merigold.png",
+  "image": "/uploads/cards/Neutral/TrissMerigold.png",
   "__v": 0
 },
 {
@@ -2617,7 +2601,7 @@
     }
   ],
   "power": 8,
-  "image": "/uploads/cards/Neutral/Yennefer of Vengerberg.png",
+  "image": "/uploads/cards/Neutral/YenneferofVengerberg.png",
   "__v": 0
 },
 {
@@ -2637,7 +2621,7 @@
     }
   ],
   "power": 15,
-  "image": "/uploads/cards/Neutral/Cirilla Fiona Elen Riannon.png",
+  "image": "/uploads/cards/Neutral/CirillaFionaElenRiannon.png",
   "__v": 0
 },
 {
@@ -2657,7 +2641,7 @@
     }
   ],
   "power": 15,
-  "image": "/uploads/cards/Neutral/Geralt of Rivia.png",
+  "image": "/uploads/cards/Neutral/GeraltofRivia.png",
   "__v": 0
 },
 {
@@ -2677,6 +2661,6 @@
     }
   ],
   "power": 6,
-  "image": "/uploads/cards/Monsters/Crone Brewess.png",
+  "image": "/uploads/cards/Monsters/CroneBrewess.png",
   "__v": 0
 }]
